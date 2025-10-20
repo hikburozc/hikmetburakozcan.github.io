@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Exams - MATH 141 - 2025-2026 Fall</title>
+
+<!-- Fonts & Tailwind -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<script>
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "primary": "#0f49bd",
+                "background-light": "#f6f6f8",
+                "background-dark": "#101622",
+            },
+            fontFamily: { "display": ["Newsreader", "serif"] },
+        },
+    },
+}
+</script>
+
+<style>
+body { font-family: 'Newsreader', serif; }
+</style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 transition-colors duration-300">
+<div class="min-h-screen flex flex-col">
+
+<!-- Header -->
+<header class="w-full border-b border-gray-200 dark:border-gray-700">
+<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-gray-900 dark:text-white">MATH 141 – Basic Calculus I: Exams</h1>
+    <button id="dark-toggle" class="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">🌙</button>
+</div>
+</header>
+
+<!-- Main Content -->
+<main class="flex-grow container mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">Exams</h2>
+
+    <ul class="space-y-6 text-gray-700 dark:text-gray-300">
+        <li class="border-l-4 border-primary pl-4">
+            <strong>Midterm I</strong><br/>
+            <a href="Midterm_1.pdf" class="text-primary hover:underline">[Questions]</a>
+            <a href="Midterm_1_Key.pdf" class="text-primary hover:underline">[Answer Key]</a>
+        </li>
+        <!-- Dilediğin kadar hafta ekleyebilirsin -->
+    </ul>
+</main>
+
+<!-- Footer -->
+<footer class="border-t border-gray-200 dark:border-gray-700 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+    © 2025 Hikmet Burak Özcan — All rights reserved.
+</footer>
+</div>
+
+<!-- Script -->
+<script>
+const darkToggle = document.getElementById('dark-toggle');
+darkToggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+});
+</script>
+
+</body>
+</html>
