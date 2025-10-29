@@ -6,9 +6,9 @@
 <title>Seminars - Hikmet Burak Özcan</title>
 
 <!-- Fonts & Tailwind -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
 <script>
@@ -38,48 +38,40 @@ body { font-family: 'Newsreader', serif; }
 <!-- Header -->
 <header class="w-full border-b border-gray-200 dark:border-gray-700">
   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo -->
     <div class="flex items-center gap-3">
       <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12 2L1 9l4 1.5V17h2v-6h2v6h2v-6h2v6h2V10.5L23 9z"></path>
       </svg>
-      <h1 class="text-xl font-bold text-gray-900 dark:text-white">Hikmet Burak Özcan</h1>
+      <h1 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Hikmet Burak Özcan</h1>
     </div>
 
-    <!-- Desktop Navigation -->
-    <nav class="hidden md:flex items-center gap-6">
-      <a href="index.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">About</a>
-      <a href="publications.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Publications</a>
-      <a href="teaching.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Teaching</a>
-      <a href="seminars.html" class="text-sm font-medium text-primary dark:text-primary">Seminars</a>
-      <a href="art.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Art</a>
-      <a href="contact.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
-    </nav>
-
-    <!-- Mobile Menu Button -->
-    <button id="menuBtn" class="md:hidden flex items-center text-gray-600 dark:text-gray-300 focus:outline-none">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-        viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round"
-        d="M4 6h16M4 12h16M4 18h16"/></svg>
+    <!-- Hamburger (mobile) -->
+    <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+      ☰
     </button>
 
+    <!-- Navbar -->
+    <nav id="navbar" class="hidden md:flex flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-background-light dark:bg-background-dark md:bg-transparent md:dark:bg-transparent border-t md:border-0 border-gray-200 dark:border-gray-700 md:items-center md:gap-6 z-10">
+      <a href="index.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">About</a>
+      <a href="publications.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Publications</a>
+      <a href="teaching.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Teaching</a>
+      <a href="seminars.html" class="block px-6 py-3 md:p-0 text-sm font-medium text-primary dark:text-primary">Seminars</a>
+      <a href="art.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Art</a>
+      <a href="resume.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Resume</a>
+      <a href="contact.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Contact</a>
+    </nav>
+
+    <!-- Language & Theme -->
     <div class="hidden md:flex items-center gap-4">
       <div class="flex items-center gap-2 text-sm">
         <button class="font-bold text-primary">EN</button>
         <span class="text-gray-300 dark:text-gray-600">/</span>
-        <button class="hover:text-primary dark:hover:text-primary">TR</button>
+        <button class="hover:text-primary dark:hover:text-primary transition-colors">TR</button>
       </div>
+      <button id="dark-toggle" class="ml-2 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">🌙</button>
     </div>
   </div>
-
-  <!-- Mobile Menu -->
-  <nav id="mobileMenu" class="hidden flex-col space-y-2 px-6 pb-4 md:hidden bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-700">
-    <a href="index.html" class="text-sm font-medium hover:text-primary">About</a>
-    <a href="publications.html" class="text-sm font-medium hover:text-primary">Publications</a>
-    <a href="teaching.html" class="text-sm font-medium hover:text-primary">Teaching</a>
-    <a href="seminars.html" class="text-sm font-medium text-primary">Seminars</a>
-    <a href="art.html" class="text-sm font-medium hover:text-primary">Art</a>
-    <a href="contact.html" class="text-sm font-medium hover:text-primary">Contact</a>
-  </nav>
 </header>
 
 <!-- Main Content -->
@@ -192,12 +184,18 @@ body { font-family: 'Newsreader', serif; }
   © 2025 Hikmet Burak Özcan — All rights reserved.
 </footer>
 
-</div>
-
-<!-- Script for Mobile Menu -->
+<!-- Scripts -->
 <script>
-document.getElementById('menuBtn').addEventListener('click', function() {
-  document.getElementById('mobileMenu').classList.toggle('hidden');
+// Dark mode
+document.getElementById('dark-toggle')?.addEventListener('click', () => {
+  document.documentElement.classList.toggle('dark');
+});
+
+// Mobile menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navbar = document.getElementById('navbar');
+menuToggle?.addEventListener('click', () => {
+  navbar.classList.toggle('hidden');
 });
 </script>
 
