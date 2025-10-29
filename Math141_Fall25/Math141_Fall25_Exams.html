@@ -37,23 +37,27 @@ body { font-family: 'Newsreader', serif; }
 
 <!-- Header -->
 <header class="w-full border-b border-gray-200 dark:border-gray-700">
-<div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold text-gray-900 dark:text-white">MATH 141 – Basic Calculus I: Exams</h1>
-    <button id="dark-toggle" class="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">🌙</button>
-</div>
+  <div class="container mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+      <h1 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
+          MATH 141 – Basic Calculus I: Exams
+      </h1>
+      <button id="dark-toggle" class="ml-0 sm:ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+          🌙
+      </button>
+  </div>
 </header>
 
 <!-- Main Content -->
-<main class="flex-grow container mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">Exams</h2>
+<main class="flex-grow container mx-auto px-4 sm:px-6 py-16">
+    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center sm:text-left">Exams</h2>
 
     <ul class="space-y-6 text-gray-700 dark:text-gray-300">
-        <li class="border-l-4 border-primary pl-4">
+        <li class="border-l-4 border-primary pl-4 py-2">
             <strong>Midterm I</strong><br/>
-            <a href="Midterm_1.pdf" class="text-primary hover:underline">[Questions]</a>
-            <a href="Midterm_1_Key.pdf" class="text-primary hover:underline">[Answer Key]</a>
+            <a href="Midterm_1.pdf" class="block sm:inline text-primary hover:underline">[Questions]</a>
+            <a href="Midterm_1_Key.pdf" class="block sm:inline text-primary hover:underline ml-0 sm:ml-4">[Answer Key]</a>
         </li>
-        <!-- Dilediğin kadar hafta ekleyebilirsin -->
+        <!-- Dilediğin kadar sınav ekleyebilirsin -->
     </ul>
 </main>
 

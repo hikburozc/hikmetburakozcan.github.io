@@ -37,111 +37,108 @@ body { font-family: 'Newsreader', serif; }
 
 <!-- Header -->
 <header class="w-full border-b border-gray-200 dark:border-gray-700">
-<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+  <div class="container mx-auto max-w-screen-lg px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
     <div class="flex items-center gap-3">
-        <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L1 9l4 1.5V17h2v-6h2v6h2v-6h2v6h2V10.5L23 9z"></path>
-            <path d="M12 4.132L19.982 9H4.018zM6 18h12v-1H6v1z"></path>
-        </svg>
-        <h1 class="text-xl font-bold text-gray-900 dark:text-white">Hikmet Burak Özcan</h1>
+      <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2L1 9l4 1.5V17h2v-6h2v6h2v-6h2v6h2V10.5L23 9z"></path>
+        <path d="M12 4.132L19.982 9H4.018zM6 18h12v-1H6v1z"></path>
+      </svg>
+      <h1 class="text-xl font-bold text-gray-900 dark:text-white">Hikmet Burak Özcan</h1>
     </div>
 
     <nav class="hidden md:flex items-center gap-6">
-        <a href="index.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">About</a>
-        <a href="publications.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Publications</a>
-        <a href="teaching.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Teaching</a>
-        <a href="seminars.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Seminars</a>
-        <a href="art.html" class="text-sm font-medium text-primary dark:text-primary">Art</a>
-        <a href="contact.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
+      <a href="index.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">About</a>
+      <a href="publications.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Publications</a>
+      <a href="teaching.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Teaching</a>
+      <a href="seminars.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Seminars</a>
+      <a href="art.html" class="text-sm font-medium text-primary dark:text-primary">Art</a>
+      <a href="resume.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Resume</a>
+      <a href="contact.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
     </nav>
 
-    <div class="flex items-center gap-4">
-        <div class="flex items-center gap-2 text-sm">
-            <button class="font-bold text-primary">EN</button>
-            <span class="text-gray-300 dark:text-gray-600">/</span>
-            <button class="hover:text-primary dark:hover:text-primary">TR</button>
-        </div>
+    <div class="flex items-center gap-4 mt-2 sm:mt-0">
+      <div class="flex items-center gap-2 text-sm">
+        <button class="font-bold text-primary">EN</button>
+        <span class="text-gray-300 dark:text-gray-600">/</span>
+        <button class="hover:text-primary dark:hover:text-primary">TR</button>
+      </div>
     </div>
-</div>
+  </div>
 </header>
 
 <!-- Main -->
-<main class="flex-grow container mx-auto px-6 py-16">
-    <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-8">Photographs & Drawings</h2>
+<main class="flex-grow container mx-auto max-w-screen-lg px-4 sm:px-6 py-10">
+  <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6 text-center">Photographs & Drawings</h2>
 
-    <p class="text-lg text-gray-700 dark:text-gray-300 mb-10 max-w-2xl">
-        Outside of mathematics, I have a deep interest in black-and-white drawing and photography.
-        Here, you can find a selection of my drawings and photographs taken during my travels.
-    </p>
+  <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto text-center">
+    Outside of mathematics, I have a deep interest in black-and-white drawing and photography.
+    Here, you can find a selection of my drawings and photographs taken during my travels.
+  </p>
 
-    <!-- Art Gallery -->
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <div class="rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-            <img src="Photos/cologne_catedral.jpg" alt="Cologne Cathedral" 
-                 class="w-full h-56 object-cover cursor-pointer" 
-                 onclick="openModal(this)">
-            <div class="p-4">
-                <h3 class="font-semibold text-lg mb-2">Cologne Cathedral</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">A magnificent example of Gothic architecture rising above the city of Cologne.</p>
-            </div>
-        </div>
-
-        <div class="rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-            <img src="Photos/london_red_buses.jpg" alt="London Red Buses" 
-                 class="w-full h-56 object-cover cursor-pointer" 
-                 onclick="openModal(this)">
-            <div class="p-4">
-                <h3 class="font-semibold text-lg mb-2">London’s Iconic Red Buses</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">A timeless symbol of the city, bringing life and color to the streets of London.</p>
-            </div>
-        </div>
-
-        <div class="rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-            <img src="Photos/firenze.jpg" alt="View of Florence from Piazzale Michelangelo" 
-                 class="w-full h-56 object-cover cursor-pointer" 
-                 onclick="openModal(this)">
-            <div class="p-4">
-                <h3 class="font-semibold text-lg mb-2">View of Florence from Piazzale Michelangelo</h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm">A breathtaking panorama of Florence, where the city’s timeless beauty meets the soft glow of the Tuscan sunset.</p>
-            </div>
-        </div>
+  <!-- Art Gallery -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+    <div class="rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+      <img src="Photos/cologne_catedral.jpg" alt="Cologne Cathedral" 
+           class="w-full h-56 sm:h-60 md:h-56 object-cover cursor-pointer" 
+           onclick="openModal(this)">
+      <div class="p-4">
+        <h3 class="font-semibold text-lg mb-2">Cologne Cathedral</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-sm">A magnificent example of Gothic architecture rising above the city of Cologne.</p>
+      </div>
     </div>
+
+    <div class="rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+      <img src="Photos/london_red_buses.jpg" alt="London Red Buses" 
+           class="w-full h-56 sm:h-60 md:h-56 object-cover cursor-pointer" 
+           onclick="openModal(this)">
+      <div class="p-4">
+        <h3 class="font-semibold text-lg mb-2">London’s Iconic Red Buses</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-sm">A timeless symbol of the city, bringing life and color to the streets of London.</p>
+      </div>
+    </div>
+
+    <div class="rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+      <img src="Photos/firenze.jpg" alt="View of Florence from Piazzale Michelangelo" 
+           class="w-full h-56 sm:h-60 md:h-56 object-cover cursor-pointer" 
+           onclick="openModal(this)">
+      <div class="p-4">
+        <h3 class="font-semibold text-lg mb-2">View of Florence from Piazzale Michelangelo</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-sm">A breathtaking panorama of Florence, where the city’s timeless beauty meets the soft glow of the Tuscan sunset.</p>
+      </div>
+    </div>
+  </div>
 </main>
 
 <!-- Modal -->
 <div id="imageModal" class="fixed inset-0 hidden bg-black bg-opacity-80 flex items-center justify-center z-50" onclick="closeModal()">
-    <span class="absolute top-6 right-8 text-white text-3xl cursor-pointer" onclick="closeModal(event)">&times;</span>
-    <img id="modalImage" class="max-w-4xl max-h-[90vh] rounded-lg shadow-lg" onclick="event.stopPropagation()">
+  <span class="absolute top-4 right-4 sm:top-6 sm:right-8 text-white text-3xl cursor-pointer" onclick="closeModal(event)">&times;</span>
+  <img id="modalImage" class="max-w-full sm:max-w-4xl max-h-[80vh] sm:max-h-[90vh] rounded-lg shadow-lg" onclick="event.stopPropagation()">
 </div>
 
 <!-- Footer -->
 <footer class="border-t border-gray-200 dark:border-gray-700 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
-    © 2025 Hikmet Burak Özcan — All rights reserved.
+  © 2025 Hikmet Burak Özcan — All rights reserved.
 </footer>
 
 </div>
 
-<!-- JavaScript -->
 <script>
 function openModal(imgElement) {
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImage");
-    modal.classList.remove("hidden");
-    modalImg.src = imgElement.src;
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  modal.classList.remove("hidden");
+  modalImg.src = imgElement.src;
 }
 
 function closeModal(event) {
-    if (event) event.stopPropagation();
-    document.getElementById("imageModal").classList.add("hidden");
+  if (event) event.stopPropagation();
+  document.getElementById("imageModal").classList.add("hidden");
 }
 
-// ESC tuşu ile kapatma
+// ESC key to close modal
 document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
-        closeModal();
-    }
+  if (event.key === "Escape") closeModal();
 });
 </script>
-
 </body>
 </html>

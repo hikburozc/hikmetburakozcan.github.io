@@ -37,54 +37,71 @@ body { font-family: 'Newsreader', serif; }
 
 <!-- Header -->
 <header class="w-full border-b border-gray-200 dark:border-gray-700">
-<div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-3">
-        <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L1 9l4 1.5V17h2v-6h2v6h2v-6h2v6h2V10.5L23 9z"></path>
-            <path d="M12 4.132L19.982 9H4.018zM6 18h12v-1H6v1z"></path>
-        </svg>
-        <h1 class="text-xl font-bold text-gray-900 dark:text-white">Hikmet Burak Özcan</h1>
-    </div>
-
-    <nav class="hidden md:flex items-center gap-6">
-        <a href="index.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">About</a>
-        <a href="publications.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Publications</a>
-        <a href="teaching.html" class="text-sm font-medium text-primary dark:text-primary">Teaching</a>
-        <a href="seminars.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Seminars</a>
-        <a href="art.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Art</a>
-        <a href="contact.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
-    </nav>
-
-    <div class="flex items-center gap-4">
-        <div class="flex items-center gap-2 text-sm">
-            <button class="font-bold text-primary">EN</button>
-            <span class="text-gray-300 dark:text-gray-600">/</span>
-            <button class="hover:text-primary dark:hover:text-primary transition-colors">TR</button>
+    <div class="container max-w-screen-lg mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L1 9l4 1.5V17h2v-6h2v6h2v-6h2v6h2V10.5L23 9z"></path>
+                <path d="M12 4.132L19.982 9H4.018zM6 18h12v-1H6v1z"></path>
+            </svg>
+            <h1 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Hikmet Burak Özcan</h1>
         </div>
-        <button id="dark-toggle" class="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">🌙</button>
+
+        <!-- Hamburger button (mobile) -->
+        <button id="menu-toggle" class="md:hidden p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700">
+            ☰
+        </button>
+
+        <!-- Navigation -->
+        <nav id="menu" class="hidden md:flex flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-background-light dark:bg-background-dark md:bg-transparent md:dark:bg-transparent md:items-center gap-4 md:gap-6 px-6 md:px-0 py-4 md:py-0 border-t md:border-none border-gray-200 dark:border-gray-700 z-50">
+            <a href="index.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">About</a>
+            <a href="publications.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Publications</a>
+            <a href="teaching.html" class="text-sm font-medium text-primary dark:text-primary">Teaching</a>
+            <a href="seminars.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Seminars</a>
+            <a href="art.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Art</a>
+            <a href="contact.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
+
+            <!-- Language + Dark mode (mobile içinde göster) -->
+            <div class="flex md:hidden items-center justify-between mt-4">
+                <div class="flex items-center gap-2 text-sm">
+                    <button class="font-bold text-primary">EN</button>
+                    <span class="text-gray-300 dark:text-gray-600">/</span>
+                    <button class="hover:text-primary dark:hover:text-primary transition-colors">TR</button>
+                </div>
+                <button id="dark-toggle-mobile" class="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">🌙</button>
+            </div>
+        </nav>
+
+        <!-- Language + Dark mode (desktop) -->
+        <div class="hidden md:flex items-center gap-4">
+            <div class="flex items-center gap-2 text-sm">
+                <button class="font-bold text-primary">EN</button>
+                <span class="text-gray-300 dark:text-gray-600">/</span>
+                <button class="hover:text-primary dark:hover:text-primary transition-colors">TR</button>
+            </div>
+            <button id="dark-toggle" class="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">🌙</button>
+        </div>
     </div>
-</div>
 </header>
 
 <!-- Main Content -->
-<main class="flex-grow container mx-auto px-6 py-16">
-    <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-8">Teaching</h2>
+<main class="flex-grow container max-w-screen-lg mx-auto px-4 sm:px-6 py-12 sm:py-16">
+    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8">Teaching</h2>
 
     <!-- Section: Current Courses -->
     <section class="mb-12">
-        <h3 class="text-2xl font-semibold text-primary mb-4">2025-2026 Fall</h3>
-        <ul class="space-y-4 text-lg text-gray-700 dark:text-gray-300">
+        <h3 class="text-xl sm:text-2xl font-semibold text-primary mb-4">2025–2026 Fall</h3>
+        <ul class="space-y-6 text-base sm:text-lg text-gray-700 dark:text-gray-300">
             <li>
                 <strong>MATH 141 – Basic Calculus I</strong><br/> 
                 <a href="Math141_Fall25/Math141_Fall25_Syllabus.pdf" class="text-primary hover:underline">[Syllabus]</a> |
-                <a href="Math141_Fall25/Math141_Fall25_RecitationClasses.html" class="text-primary hover:underline">[Recitation Classes]</a>
-                <a href="Math141_Fall25/Math141_Fall25_LectureNotes.html" class="text-primary hover:underline">[Lecture Notes]</a>
+                <a href="Math141_Fall25/Math141_Fall25_RecitationClasses.html" class="text-primary hover:underline">[Recitation Classes]</a> |
+                <a href="Math141_Fall25/Math141_Fall25_LectureNotes.html" class="text-primary hover:underline">[Lecture Notes]</a> |
                 <a href="Math141_Fall25/Math141_Fall25_Exams.html" class="text-primary hover:underline">[Exams]</a>
             </li>
             <li>
                 <strong>MATH 145 – Calculus for Engineering and Science I</strong><br/>  
                 <a href="#" class="text-primary hover:underline">[Syllabus]</a> |
-                <a href="Math145_Fall25/Math145_Fall25_RecitationClasses.html" class="text-primary hover:underline">[Recitation Classes]</a>
+                <a href="Math145_Fall25/Math145_Fall25_RecitationClasses.html" class="text-primary hover:underline">[Recitation Classes]</a> |
                 <a href="Math145_Fall25/Math145_Fall25_Exams.html" class="text-primary hover:underline">[Exams]</a>
             </li>
             <li>
@@ -105,8 +122,19 @@ body { font-family: 'Newsreader', serif; }
 <!-- Script -->
 <script>
 const darkToggle = document.getElementById('dark-toggle');
-darkToggle.addEventListener('click', () => {
+const darkToggleMobile = document.getElementById('dark-toggle-mobile');
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+
+function toggleDark() {
     document.documentElement.classList.toggle('dark');
+}
+
+darkToggle?.addEventListener('click', toggleDark);
+darkToggleMobile?.addEventListener('click', toggleDark);
+
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
 });
 </script>
 

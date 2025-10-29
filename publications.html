@@ -6,24 +6,24 @@
 <title>Publications - Hikmet Burak Özcan</title>
 
 <!-- Fonts & Tailwind -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
 <script>
 tailwind.config = {
-    darkMode: "class",
-    theme: {
-        extend: {
-            colors: {
-                "primary": "#0f49bd",
-                "background-light": "#f6f6f8",
-                "background-dark": "#101622",
-            },
-            fontFamily: { "display": ["Newsreader", "serif"] },
-        },
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#0f49bd",
+        "background-light": "#f6f6f8",
+        "background-dark": "#101622",
+      },
+      fontFamily: { "display": ["Newsreader", "serif"] },
     },
+  },
 }
 </script>
 
@@ -37,107 +37,125 @@ body { font-family: 'Newsreader', serif; }
 
 <!-- Header -->
 <header class="w-full border-b border-gray-200 dark:border-gray-700">
-<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo -->
     <div class="flex items-center gap-3">
-        <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L1 9l4 1.5V17h2v-6h2v6h2v-6h2v6h2V10.5L23 9z"></path>
-            <path d="M12 4.132L19.982 9H4.018zM6 18h12v-1H6v1z"></path>
-        </svg>
-        <h1 class="text-xl font-bold text-gray-900 dark:text-white">Hikmet Burak Özcan</h1>
+      <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2L1 9l4 1.5V17h2v-6h2v6h2v-6h2v6h2V10.5L23 9z"></path>
+        <path d="M12 4.132L19.982 9H4.018zM6 18h12v-1H6v1z"></path>
+      </svg>
+      <h1 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Hikmet Burak Özcan</h1>
     </div>
 
-    <nav class="hidden md:flex items-center gap-6">
-        <a href="index.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">About</a>
-        <a href="publications.html" class="text-sm font-medium text-primary dark:text-primary">Publications</a>
-        <a href="teaching.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Teaching</a>
-        <a href="seminars.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Seminars</a>
-        <a href="art.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Art</a>
-        <a href="contact.html" class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
+    <!-- Hamburger (mobile) -->
+    <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+      ☰
+    </button>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="hidden md:flex flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-background-light dark:bg-background-dark md:bg-transparent md:dark:bg-transparent border-t md:border-0 border-gray-200 dark:border-gray-700 md:items-center md:gap-6 z-10">
+      <a href="index.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">About</a>
+      <a href="publications.html" class="block px-6 py-3 md:p-0 text-sm font-medium text-primary dark:text-primary">Publications</a>
+      <a href="teaching.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Teaching</a>
+      <a href="seminars.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Seminars</a>
+      <a href="art.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Art</a>
+      <a href="resume.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Resume</a>
+      <a href="contact.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Contact</a>
     </nav>
 
-    <div class="flex items-center gap-4">
-        <div class="flex items-center gap-2 text-sm">
-            <button class="font-bold text-primary">EN</button>
-            <span class="text-gray-300 dark:text-gray-600">/</span>
-            <button class="hover:text-primary dark:hover:text-primary transition-colors">TR</button>
-        </div>
-        <button id="dark-toggle" class="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">🌙</button>
+    <!-- Language & Theme -->
+    <div class="hidden md:flex items-center gap-4">
+      <div class="flex items-center gap-2 text-sm">
+        <button class="font-bold text-primary">EN</button>
+        <span class="text-gray-300 dark:text-gray-600">/</span>
+        <button class="hover:text-primary dark:hover:text-primary transition-colors">TR</button>
+      </div>
+      <button id="dark-toggle" class="ml-2 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">🌙</button>
     </div>
-</div>
+  </div>
 </header>
 
-<!-- Main Content -->
-<main class="flex-grow container mx-auto px-6 py-16">
-    <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-8">Publications</h2>
+<!-- Main -->
+<main class="flex-grow container mx-auto px-6 py-12 sm:py-16">
+  <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8">Publications</h2>
 
-    <!-- Example Section 1 -->
-    <section class="mb-10">
-        <h3 class="text-2xl font-semibold text-primary mb-4">2025</h3>
-        <ul class="space-y-4 text-lg text-gray-700 dark:text-gray-300">
-            <li>
-                <strong>The Higher Regularity of the Discrete Hardy-Littlewood Maximal Function</strong><br/>
-                Faruk Temur, Hikmet Burak Özcan<br/>
-                <em>Preprint</em>, 2025.  
-                <a href="https://arxiv.org/abs/2504.13019" class="text-primary hover:underline">[ArXiv]</a>
-            </li>
-        </ul>
-    </section>
+  <!-- 2025 -->
+  <section class="mb-10">
+    <h3 class="text-xl sm:text-2xl font-semibold text-primary mb-4">2025</h3>
+    <ul class="space-y-4 text-base sm:text-lg text-gray-700 dark:text-gray-300">
+      <li>
+        <strong>The Higher Regularity of the Discrete Hardy-Littlewood Maximal Function</strong><br/>
+        Faruk Temur, Hikmet Burak Özcan<br/>
+        <em>Preprint</em>, 2025.  
+        <a href="https://arxiv.org/abs/2504.13019" class="text-primary hover:underline">[ArXiv]</a>
+      </li>
+    </ul>
+  </section>
 
-    <!-- Example Section 2 -->
-    <section class="mb-10">
-        <h3 class="text-2xl font-semibold text-primary mb-4">2022</h3>
-        <ul class="space-y-4 text-lg text-gray-700 dark:text-gray-300">
-            <li>
-                <strong>The Green-Tao Theorem and the Infinitude of Primes in Domains</strong><br/>
-                Haydar Göral, Hikmet Burak Özcan, Doğa Can Sertbaş<br/>
-                <em>The American Mathematical Monthly</em>, 2022.  
-                <a href="https://doi.org/10.1080/00029890.2022.2141543" class="text-primary hover:underline">[DOI]</a>
-            </li>
-        </ul>
-    </section>
+  <!-- 2022 -->
+  <section class="mb-10">
+    <h3 class="text-xl sm:text-2xl font-semibold text-primary mb-4">2022</h3>
+    <ul class="space-y-4 text-base sm:text-lg text-gray-700 dark:text-gray-300">
+      <li>
+        <strong>The Green-Tao Theorem and the Infinitude of Primes in Domains</strong><br/>
+        Haydar Göral, Hikmet Burak Özcan, Doğa Can Sertbaş<br/>
+        <em>The American Mathematical Monthly</em>, 2022.  
+        <a href="https://doi.org/10.1080/00029890.2022.2141543" class="text-primary hover:underline">[DOI]</a>
+      </li>
+    </ul>
+  </section>
 
-    <!-- Example Section 3 -->
-    <section class="mb-10">
-        <h3 class="text-2xl font-semibold text-primary mb-4">2020</h3>
-        <ul class="space-y-4 text-lg text-gray-700 dark:text-gray-300">
-            <li>
-                <strong>Rings with Few Units and the Infinitude of Primes</strong><br/>
-                Hikmet Burak Özcan, Sedef Taşkın<br/>
-                <em>Hacettepe Journal of Mathematics and Statistics</em>, 2020.
-                <a href="https://doi.org/10.15672/hujms.649706" class="text-primary hover:underline">[DOI]</a>
-            </li>
-            <li>
-                <strong>Several Novel Proofs of the Infinitude of Primes</strong><br/>
-                Haydar Göral, Hikmet Burak Özcan<br/>
-                <em>The Mathematics Student</em>, 2020.  
-                <a href="https://www.researchgate.net/publication/357528932_Several_novel_proofs_of_the_infinitude_of_primes" class="text-primary hover:underline">[Research Gate]</a>
-            </li>
-        </ul>
-    </section>
+  <!-- 2020 -->
+  <section class="mb-10">
+    <h3 class="text-xl sm:text-2xl font-semibold text-primary mb-4">2020</h3>
+    <ul class="space-y-4 text-base sm:text-lg text-gray-700 dark:text-gray-300">
+      <li>
+        <strong>Rings with Few Units and the Infinitude of Primes</strong><br/>
+        Hikmet Burak Özcan, Sedef Taşkın<br/>
+        <em>Hacettepe Journal of Mathematics and Statistics</em>, 2020.
+        <a href="https://doi.org/10.15672/hujms.649706" class="text-primary hover:underline">[DOI]</a>
+      </li>
+      <li>
+        <strong>Several Novel Proofs of the Infinitude of Primes</strong><br/>
+        Haydar Göral, Hikmet Burak Özcan<br/>
+        <em>The Mathematics Student</em>, 2020.  
+        <a href="https://www.researchgate.net/publication/357528932_Several_novel_proofs_of_the_infinitude_of_primes" class="text-primary hover:underline">[Research Gate]</a>
+      </li>
+    </ul>
+  </section>
 
-    <section class="mb-10">
-        <h3 class="text-2xl font-semibold text-primary mb-4">Master Thesis</h3>
-        <ul class="space-y-4 text-lg text-gray-700 dark:text-gray-300">
-            <li>
-                <strong>Prime Ideal Theorem on Number Fields</strong><br/>
-                <em>Supervisor: </em> Haydar Göral<br/>
-                <em>Dokuz Eylül University</em>, 2020.  
-                <a href="hbo_msc_thesis.pdf" class="text-primary hover:underline">[Thesis]</a>
-            </li>
-        </ul>
+  <!-- Thesis -->
+  <section class="mb-10">
+    <h3 class="text-xl sm:text-2xl font-semibold text-primary mb-4">Master Thesis</h3>
+    <ul class="space-y-4 text-base sm:text-lg text-gray-700 dark:text-gray-300">
+      <li>
+        <strong>Prime Ideal Theorem on Number Fields</strong><br/>
+        <em>Supervisor:</em> Haydar Göral<br/>
+        <em>Dokuz Eylül University</em>, 2020.  
+        <a href="hbo_msc_thesis.pdf" class="text-primary hover:underline">[Thesis]</a>
+      </li>
+    </ul>
+  </section>
 </main>
 
 <!-- Footer -->
 <footer class="border-t border-gray-200 dark:border-gray-700 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
-    © 2025 Hikmet Burak Özcan — All rights reserved.
+  © 2025 Hikmet Burak Özcan — All rights reserved.
 </footer>
 </div>
 
-<!-- Script -->
+<!-- Scripts -->
 <script>
-const darkToggle = document.getElementById('dark-toggle');
-darkToggle.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark');
+// Dark mode
+document.getElementById('dark-toggle')?.addEventListener('click', () => {
+  document.documentElement.classList.toggle('dark');
+});
+
+// Mobile menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navbar = document.getElementById('navbar');
+menuToggle?.addEventListener('click', () => {
+  navbar.classList.toggle('hidden');
 });
 </script>
 

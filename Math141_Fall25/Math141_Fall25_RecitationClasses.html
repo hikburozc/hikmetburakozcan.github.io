@@ -37,33 +37,38 @@ body { font-family: 'Newsreader', serif; }
 
 <!-- Header -->
 <header class="w-full border-b border-gray-200 dark:border-gray-700">
-<div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold text-gray-900 dark:text-white">MATH 141 – Basic Calculus I: Recitation Classes</h1>
-    <button id="dark-toggle" class="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">🌙</button>
-</div>
+  <div class="container mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+      <h1 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
+          MATH 141 – Basic Calculus I: Recitation Classes
+      </h1>
+      <button id="dark-toggle" class="ml-0 sm:ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+          🌙
+      </button>
+  </div>
 </header>
 
 <!-- Main Content -->
-<main class="flex-grow container mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">Recitation Classes</h2>
+<main class="flex-grow container mx-auto px-4 sm:px-6 py-16">
+    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center sm:text-left">Recitation Classes</h2>
 
     <ul class="space-y-6 text-gray-700 dark:text-gray-300">
-        <li class="border-l-4 border-primary pl-4">
+        <li class="border-l-4 border-primary pl-4 py-2">
             <strong>Week #1</strong><br/>
-            <a href="Math141_Fall25_Recitation1.pdf" class="text-primary hover:underline">[Recitation #1]</a>
+            <a href="Math141_Fall25_Recitation1.pdf" class="block sm:inline text-primary hover:underline">[Recitation #1]</a>
         </li>
-        <li class="border-l-4 border-primary pl-4">
+        <li class="border-l-4 border-primary pl-4 py-2">
             <strong>Week #2</strong><br/>
-            <a href="Math141_Fall25_Recitation2.pdf" class="text-primary hover:underline">[Recitation #2]</a>
+            <a href="Math141_Fall25_Recitation2.pdf" class="block sm:inline text-primary hover:underline">[Recitation #2]</a>
         </li>
-        <li class="border-l-4 border-primary pl-4">
+        <li class="border-l-4 border-primary pl-4 py-2">
             <strong>Week #3</strong><br/>
-            <a href="Math141_Fall25_Recitation3.pdf" class="text-primary hover:underline">[Recitation #3]</a>
+            <a href="Math141_Fall25_Recitation3.pdf" class="block sm:inline text-primary hover:underline">[Recitation #3]</a>
         </li>
-        <li class="border-l-4 border-primary pl-4">
+        <li class="border-l-4 border-primary pl-4 py-2">
             <strong>Week #4</strong><br/>
-            <a href="Math141_Fall25_Recitation4.pdf" class="text-primary hover:underline">[Recitation #4]</a>
+            <a href="Math141_Fall25_Recitation4.pdf" class="block sm:inline text-primary hover:underline">[Recitation #4]</a>
         </li>
+        <!-- Daha fazla hafta eklenebilir -->
     </ul>
 </main>
 
