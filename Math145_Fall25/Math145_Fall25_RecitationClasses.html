@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Recitation Classes - MATH 145 - 2025-2026 Fall</title>
 
 <!-- Fonts & Tailwind -->
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet" />
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
 <script>
 tailwind.config = {
-    darkMode: "class",
-    theme: {
-        extend: {
-            colors: {
-                primary: "#0f49bd",
-                "background-light": "#f6f6f8",
-                "background-dark": "#101622",
-            },
-            fontFamily: { display: ["Newsreader", "serif"] },
-        },
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#0f49bd",
+        "background-light": "#f6f6f8",
+        "background-dark": "#101622",
+      },
+      fontFamily: { display: ["Newsreader", "serif"] },
     },
-}
+  },
+};
 </script>
 
 <style>
-body { font-family: 'Newsreader', serif; }
+body {
+  font-family: 'Newsreader', serif;
+}
 </style>
 </head>
 
@@ -36,62 +38,75 @@ body { font-family: 'Newsreader', serif; }
 <div class="min-h-screen flex flex-col">
 
 <!-- Header -->
-<header class="w-full border-b border-gray-200 dark:border-gray-700">
-  <div class="container mx-auto max-w-screen-lg px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
+<header class="w-full border-b border-gray-200 dark:border-gray-700 bg-background-light dark:bg-background-dark sticky top-0 z-20">
+  <div class="container mx-auto max-w-screen-lg px-4 sm:px-6 py-4 flex justify-between items-center">
     
-    <!-- Title -->
+    <!-- Site Title -->
     <h1 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
-      MATH 145 – Calculus for Engineering and Science I: Recitation Classes
+      MATH 145 — Recitation Classes
     </h1>
 
-    <!-- Hamburger (mobile) -->
-    <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-      ☰
-    </button>
-
-    <!-- Navbar -->
-    <nav id="navbar" class="hidden md:flex flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-background-light dark:bg-background-dark md:bg-transparent md:dark:bg-transparent border-t md:border-0 border-gray-200 dark:border-gray-700 md:items-center md:gap-6 z-10">
-      <a href="index.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">About</a>
-      <a href="publications.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Publications</a>
-      <a href="teaching.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Teaching</a>
-      <a href="seminars.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Seminars</a>
-      <a href="art.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Art</a>
-      <a href="resume.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Resume</a>
-      <a href="contact.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Contact</a>
-    </nav>
-
-    <!-- Dark Mode Toggle -->
-    <button id="dark-toggle" class="ml-0 sm:ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
-      🌙
-    </button>
-
+    <!-- Menu Controls -->
+    <div class="flex items-center space-x-3">
+      <!-- Hamburger -->
+      <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+        ☰
+      </button>
+    </div>
   </div>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="hidden md:flex flex-col md:flex-row md:items-center absolute md:static top-[70px] left-0 w-full md:w-auto bg-background-light dark:bg-background-dark border-t md:border-0 border-gray-200 dark:border-gray-700 md:justify-center md:gap-6 text-center transition-all duration-300 ease-in-out">
+    <a href="index.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">About</a>
+    <a href="publications.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Publications</a>
+    <a href="teaching.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Teaching</a>
+    <a href="seminars.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Seminars</a>
+    <a href="art.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Art</a>
+    <a href="resume.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Resume</a>
+    <a href="contact.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Contact</a>
+  </nav>
 </header>
 
 <!-- Main Content -->
 <main class="flex-grow container mx-auto max-w-screen-lg px-4 sm:px-6 py-16">
-  <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center sm:text-left">Recitation Classes</h2>
+  <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center sm:text-left">
+    Recitation Classes — MATH 145 (Fall 2025–2026)
+  </h2>
 
   <ul class="space-y-6 text-gray-700 dark:text-gray-300">
     <li class="border-l-4 border-primary pl-4 py-2">
       <strong>Week #1</strong>
     </li>
+
     <li class="border-l-4 border-primary pl-4 py-2">
-      <strong>Week #2</strong><br/>
-      <a href="Math145_Fall25_Recitation1.pdf" class="block sm:inline text-primary hover:underline mr-2 mb-1 sm:mb-0">[Recitation #1]</a>
+      <strong>Week #2</strong><br />
+      <a href="Math145_Fall25_Recitation1.pdf" target="_blank" class="block sm:inline text-primary hover:underline mr-2 mb-1 sm:mb-0">
+        [Recitation #1]
+      </a>
     </li>
+
     <li class="border-l-4 border-primary pl-4 py-2">
       <strong>Week #3</strong>
     </li>
+
     <li class="border-l-4 border-primary pl-4 py-2">
-      <strong>Week #4</strong><br/>
-      <a href="Math145_Fall25_Recitation2.pdf" class="block sm:inline text-primary hover:underline mr-2 mb-1 sm:mb-0">[Recitation #2]</a>
-      <a href="Math145_Fall25_Recitation2_Solution_Key.pdf" class="block sm:inline text-primary hover:underline">[Solutions]</a>
+      <strong>Week #4</strong><br />
+      <a href="Math145_Fall25_Recitation2.pdf" target="_blank" class="block sm:inline text-primary hover:underline mr-2 mb-1 sm:mb-0">
+        [Recitation #2]
+      </a>
+      <a href="Math145_Fall25_Recitation2_Solution_Key.pdf" target="_blank" class="block sm:inline text-primary hover:underline">
+        [Solutions]
+      </a>
     </li>
+
     <li class="border-l-4 border-primary pl-4 py-2">
-      <strong>Week #5</strong><br/>
-      <a href="Math145_Fall25_Recitation3.pdf" class="block sm:inline text-primary hover:underline mr-2 mb-1 sm:mb-0">[Recitation #3]</a>
-      <a href="Math145_Fall25_Recitation3_Solution_Key.pdf" class="block sm:inline text-primary hover:underline">[Solutions]</a>
+      <strong>Week #5</strong><br />
+      <a href="Math145_Fall25_Recitation3.pdf" target="_blank" class="block sm:inline text-primary hover:underline mr-2 mb-1 sm:mb-0">
+        [Recitation #3]
+      </a>
+      <a href="Math145_Fall25_Recitation3_Solution_Key.pdf" target="_blank" class="block sm:inline text-primary hover:underline">
+        [Solutions]
+      </a>
     </li>
   </ul>
 </main>

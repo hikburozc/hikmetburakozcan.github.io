@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Exams - MATH 111 - 2025-2026 Fall</title>
+<title>Exams - MATH 111 - 2025–2026 Fall</title>
 
 <!-- Fonts & Tailwind -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -13,17 +13,17 @@
 
 <script>
 tailwind.config = {
-    darkMode: "class",
-    theme: {
-        extend: {
-            colors: {
-                primary: "#0f49bd",
-                "background-light": "#f6f6f8",
-                "background-dark": "#101622",
-            },
-            fontFamily: { display: ["Newsreader", "serif"] },
-        },
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#0f49bd",
+        "background-light": "#f6f6f8",
+        "background-dark": "#101622",
+      },
+      fontFamily: { display: ["Newsreader", "serif"] },
     },
+  },
 }
 </script>
 
@@ -38,11 +38,16 @@ body { font-family: 'Newsreader', serif; }
 <!-- Header -->
 <header class="w-full border-b border-gray-200 dark:border-gray-700">
   <div class="container mx-auto max-w-screen-lg px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
-    
-    <!-- Logo / Title -->
-    <h1 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
-      MATH 111 – Analytic Geometry: Exams
-    </h1>
+
+    <!-- Logo -->
+    <div class="flex items-center gap-3">
+      <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2L1 9l4 1.5V17h2v-6h2v6h2v-6h2v6h2V10.5L23 9z"></path>
+      </svg>
+      <h1 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
+        Hikmet Burak Özcan
+      </h1>
+    </div>
 
     <!-- Hamburger (mobile) -->
     <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
@@ -50,7 +55,9 @@ body { font-family: 'Newsreader', serif; }
     </button>
 
     <!-- Navbar -->
-    <nav id="navbar" class="hidden md:flex flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-background-light dark:bg-background-dark md:bg-transparent md:dark:bg-transparent border-t md:border-0 border-gray-200 dark:border-gray-700 md:items-center md:gap-6 z-10">
+    <nav id="navbar" class="hidden md:flex flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto 
+      bg-background-light dark:bg-background-dark md:bg-transparent md:dark:bg-transparent 
+      border-t md:border-0 border-gray-200 dark:border-gray-700 md:items-center md:gap-6 z-10">
       <a href="index.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">About</a>
       <a href="publications.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Publications</a>
       <a href="teaching.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Teaching</a>
@@ -60,17 +67,24 @@ body { font-family: 'Newsreader', serif; }
       <a href="contact.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Contact</a>
     </nav>
 
-    <!-- Dark Mode Toggle -->
-    <button id="dark-toggle" class="ml-0 sm:ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
-      🌙
-    </button>
-
+    <!-- Language & Theme -->
+    <div class="hidden md:flex items-center gap-4">
+      <div class="flex items-center gap-2 text-sm">
+        <button class="font-bold text-primary">EN</button>
+        <span class="text-gray-300 dark:text-gray-600">/</span>
+        <button class="hover:text-primary dark:hover:text-primary transition-colors">TR</button>
+      </div>
+      <button id="dark-toggle" class="ml-2 p-2 rounded-full bg-gray-200 dark:bg-gray-700 
+        hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">🌙</button>
+    </div>
   </div>
 </header>
 
 <!-- Main Content -->
 <main class="flex-grow container mx-auto max-w-screen-lg px-4 sm:px-6 py-16">
-  <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center sm:text-left">Exams</h2>
+  <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center sm:text-left">
+    MATH 111 – Analytic Geometry: Exams
+  </h2>
 
   <ul class="space-y-6 text-gray-700 dark:text-gray-300">
     <li class="border-l-4 border-primary pl-4 py-2">
@@ -104,12 +118,10 @@ const darkToggle = document.getElementById('dark-toggle');
 const menuToggle = document.getElementById('menu-toggle');
 const navbar = document.getElementById('navbar');
 
-// Dark Mode Toggle
 darkToggle?.addEventListener('click', () => {
   document.documentElement.classList.toggle('dark');
 });
 
-// Hamburger Menu Toggle
 menuToggle?.addEventListener('click', () => {
   navbar.classList.toggle('hidden');
 });
