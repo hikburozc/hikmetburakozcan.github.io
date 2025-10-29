@@ -17,11 +17,11 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        "primary": "#0f49bd",
+        primary: "#0f49bd",
         "background-light": "#f6f6f8",
         "background-dark": "#101622",
       },
-      fontFamily: { "display": ["Newsreader", "serif"] },
+      fontFamily: { display: ["Newsreader", "serif"] },
     },
   },
 }
@@ -37,7 +37,7 @@ body { font-family: 'Newsreader', serif; }
 
 <!-- Header -->
 <header class="w-full border-b border-gray-200 dark:border-gray-700">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+  <div class="container mx-auto max-w-screen-lg px-4 sm:px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
     <!-- Logo -->
     <div class="flex items-center gap-3">
       <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@ body { font-family: 'Newsreader', serif; }
       <a href="index.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">About</a>
       <a href="publications.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Publications</a>
       <a href="teaching.html" class="block px-6 py-3 md:p-0 text-sm font-medium text-primary dark:text-primary">Teaching</a>
-      <a href="seminars.html" class="block px-6 py-3 md:p-0 text-sm font-medium text-primary dark:hover:text-primary">Seminars</a>
+      <a href="seminars.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Seminars</a>
       <a href="art.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Art</a>
       <a href="resume.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Resume</a>
       <a href="contact.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Contact</a>
@@ -76,56 +76,52 @@ body { font-family: 'Newsreader', serif; }
 
 <!-- Main Content -->
 <main class="flex-grow container max-w-screen-lg mx-auto px-4 sm:px-6 py-12 sm:py-16">
-    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8">Teaching</h2>
+  <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">Teaching</h2>
 
-    <!-- Section: Current Courses -->
-    <section class="mb-12">
-        <h3 class="text-xl sm:text-2xl font-semibold text-primary mb-4">2025–2026 Fall</h3>
-        <ul class="space-y-6 text-base sm:text-lg text-gray-700 dark:text-gray-300">
-            <li>
-                <strong>MATH 141 – Basic Calculus I</strong><br/> 
-                <a href="Math141_Fall25/Math141_Fall25_Syllabus.pdf" class="text-primary hover:underline">[Syllabus]</a> |
-                <a href="Math141_Fall25/Math141_Fall25_RecitationClasses.html" class="text-primary hover:underline">[Recitation Classes]</a> |
-                <a href="Math141_Fall25/Math141_Fall25_LectureNotes.html" class="text-primary hover:underline">[Lecture Notes]</a> |
-                <a href="Math141_Fall25/Math141_Fall25_Exams.html" class="text-primary hover:underline">[Exams]</a>
-            </li>
-            <li>
-                <strong>MATH 145 – Calculus for Engineering and Science I</strong><br/>  
-                <a href="#" class="text-primary hover:underline">[Syllabus]</a> |
-                <a href="Math145_Fall25/Math145_Fall25_RecitationClasses.html" class="text-primary hover:underline">[Recitation Classes]</a> |
-                <a href="Math145_Fall25/Math145_Fall25_Exams.html" class="text-primary hover:underline">[Exams]</a>
-            </li>
-            <li>
-                <strong>MATH 111 – Analytic Geometry</strong><br/>  
-                <a href="Math111_Fall25/Math111_Fall25_Syllabus.pdf" class="text-primary hover:underline">[Syllabus]</a> |
-                <a href="Math111_Fall25/Math111_Fall25_Exams.html" class="text-primary hover:underline">[Exams]</a>
-            </li>
-        </ul>
-    </section>
+  <!-- Section: Current Courses -->
+  <section class="mb-12">
+    <h3 class="text-xl sm:text-2xl font-semibold text-primary mb-4">2025–2026 Fall</h3>
+    <ul class="space-y-6 text-base sm:text-lg text-gray-700 dark:text-gray-300">
+      <li>
+        <strong>MATH 141 – Basic Calculus I</strong><br/> 
+        <a href="Math141_Fall25/Math141_Fall25_Syllabus.pdf" class="text-primary hover:underline">[Syllabus]</a> |
+        <a href="Math141_Fall25/Math141_Fall25_RecitationClasses.html" class="text-primary hover:underline">[Recitation Classes]</a> |
+        <a href="Math141_Fall25/Math141_Fall25_LectureNotes.html" class="text-primary hover:underline">[Lecture Notes]</a> |
+        <a href="Math141_Fall25/Math141_Fall25_Exams.html" class="text-primary hover:underline">[Exams]</a>
+      </li>
+      <li>
+        <strong>MATH 145 – Calculus for Engineering and Science I</strong><br/>  
+        <a href="#" class="text-primary hover:underline">[Syllabus]</a> |
+        <a href="Math145_Fall25/Math145_Fall25_RecitationClasses.html" class="text-primary hover:underline">[Recitation Classes]</a> |
+        <a href="Math145_Fall25/Math145_Fall25_Exams.html" class="text-primary hover:underline">[Exams]</a>
+      </li>
+      <li>
+        <strong>MATH 111 – Analytic Geometry</strong><br/>  
+        <a href="Math111_Fall25/Math111_Fall25_Syllabus.pdf" class="text-primary hover:underline">[Syllabus]</a> |
+        <a href="Math111_Fall25/Math111_Fall25_Exams.html" class="text-primary hover:underline">[Exams]</a>
+      </li>
+    </ul>
+  </section>
 </main>
 
 <!-- Footer -->
 <footer class="border-t border-gray-200 dark:border-gray-700 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
-    © 2025 Hikmet Burak Özcan — All rights reserved.
+  © 2025 Hikmet Burak Özcan — All rights reserved.
 </footer>
 </div>
 
-<!-- Script -->
+<!-- Scripts -->
 <script>
 const darkToggle = document.getElementById('dark-toggle');
-const darkToggleMobile = document.getElementById('dark-toggle-mobile');
 const menuToggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
+const navbar = document.getElementById('navbar');
 
-function toggleDark() {
-    document.documentElement.classList.toggle('dark');
-}
+darkToggle?.addEventListener('click', () => {
+  document.documentElement.classList.toggle('dark');
+});
 
-darkToggle?.addEventListener('click', toggleDark);
-darkToggleMobile?.addEventListener('click', toggleDark);
-
-menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
+menuToggle?.addEventListener('click', () => {
+  navbar.classList.toggle('hidden');
 });
 </script>
 
