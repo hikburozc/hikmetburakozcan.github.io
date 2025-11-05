@@ -3,8 +3,25 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Hikmet Burak Özcan - Personal Academic Website</title>
 
+<title>Hikmet Burak Özcan | Research Assistant at İzmir Institute of Technology</title>
+
+<!-- SEO meta tags -->
+<meta name="description" content="Official academic website of Hikmet Burak Özcan, Research Assistant at İzmir Institute of Technology. PhD candidate in Mathematics specializing in Harmonic Analysis and Discrete Hardy–Littlewood Maximal Functions.">
+<meta name="keywords" content="Hikmet Burak Özcan, İzmir Institute of Technology, Mathematics, Harmonic Analysis, Hardy-Littlewood Maximal Function, Research Assistant, Academic Website">
+<meta name="author" content="Hikmet Burak Özcan">
+
+<!-- Open Graph tags (for Google, LinkedIn, etc.) -->
+<meta property="og:title" content="Hikmet Burak Özcan | Mathematics Researcher">
+<meta property="og:description" content="PhD candidate and Research Assistant in Mathematics at İzmir Institute of Technology. Specializing in Harmonic Analysis and Discrete Maximal Operators.">
+<meta property="og:image" content="https://hikburozc.github.io/hikmetburakozcan.github.io/hbo.jpg">
+<meta property="og:url" content="https://hikburozc.github.io/hikmetburakozcan.github.io/">
+<meta property="og:type" content="website">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="favicon.png">
+
+<!-- Google Fonts + Tailwind -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
@@ -29,6 +46,28 @@ tailwind.config = {
 <style>
 body { font-family: 'Newsreader', serif; }
 </style>
+
+<!-- Structured data (Google Knowledge Panel optimization) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hikmet Burak Özcan",
+  "image": "https://hikburozc.github.io/hikmetburakozcan.github.io/hbo.jpg",
+  "jobTitle": "Research Assistant",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "İzmir Institute of Technology",
+    "url": "https://www.iyte.edu.tr"
+  },
+  "url": "https://hikburozc.github.io/hikmetburakozcan.github.io/",
+  "sameAs": [
+    "https://www.researchgate.net/profile/Hikmet-Burak-Oezcan",
+  ],
+  "description": "PhD candidate and researcher in Mathematics specializing in Harmonic Analysis and Discrete Maximal Functions."
+}
+</script>
+
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 transition-colors duration-300">
@@ -39,7 +78,7 @@ body { font-family: 'Newsreader', serif; }
   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
     <!-- Logo + Name -->
     <div class="flex items-center gap-3">
-      <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+      <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M12 2L1 9l4 1.5V17h2v-6h2v6h2v-6h2v6h2V10.5L23 9z"></path>
         <path d="M12 4.132L19.982 9H4.018zM6 18h12v-1H6v1z"></path>
       </svg>
@@ -47,9 +86,7 @@ body { font-family: 'Newsreader', serif; }
     </div>
 
     <!-- Hamburger button (mobile) -->
-    <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-      ☰
-    </button>
+    <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle navigation menu">☰</button>
 
     <!-- Navbar -->
     <nav id="navbar" class="hidden md:flex flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-background-light dark:bg-background-dark md:bg-transparent md:dark:bg-transparent border-t md:border-0 border-gray-200 dark:border-gray-700 md:items-center md:gap-6 z-10">
@@ -69,7 +106,7 @@ body { font-family: 'Newsreader', serif; }
         <span class="text-gray-300 dark:text-gray-600">/</span>
         <button class="hover:text-primary dark:hover:text-primary transition-colors">TR</button>
       </div>
-      <button id="dark-toggle" class="ml-2 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">🌙</button>
+      <button id="dark-toggle" class="ml-2 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" aria-label="Toggle dark mode">🌙</button>
     </div>
   </div>
 </header>
@@ -79,7 +116,7 @@ body { font-family: 'Newsreader', serif; }
   <div class="w-full grid md:grid-cols-3 gap-10 sm:gap-12 items-center">
     <div class="md:col-span-1 flex justify-center">
       <div class="w-36 h-36 sm:w-48 sm:h-48 rounded-full overflow-hidden shadow-lg">
-        <img src="hbo.jpg" alt="Hikmet Burak Özcan" class="w-full h-full object-cover"/>
+        <img src="hbo.jpg" alt="Portrait of Hikmet Burak Özcan" class="w-full h-full object-cover"/>
       </div>
     </div>
     <div class="md:col-span-2 text-center md:text-left">
@@ -88,11 +125,10 @@ body { font-family: 'Newsreader', serif; }
         Research Assistant, Department of Mathematics, İzmir Institute of Technology
       </p>
       <p class="mt-4 text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto md:mx-0">
-        Welcome to my website! I am a PhD candidate in Mathematics specializing in Harmonic Analysis.
+        Welcome to my website! I am a PhD candidate in Mathematics specializing in Harmonic Analysis and the study of Discrete Hardy–Littlewood Maximal Functions.
         Since 2019, I have been working as a research assistant at İzmir Institute of Technology.
-        Here, you can explore my publications, course materials from the classes where I serve as a teaching assistant,
-        and information about the seminars I give at conferences, workshops, and our department’s regular seminar series.
-        You will also find some of my paintings—as a beginner—and photographs I have taken during my travels.
+        Here, you can explore my publications, teaching materials, and seminar talks. 
+        You will also find a selection of my beginner-level paintings and travel photography.
       </p>
     </div>
   </div>
