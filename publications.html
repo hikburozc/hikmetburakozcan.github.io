@@ -1,182 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Publications - Hikmet Burak Özcan</title>
-
-<!-- Fonts & Tailwind -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications | Hikmet Burak Özcan</title>
+<meta name="description" content="Publications and preprints of Hikmet Burak Özcan in harmonic analysis, uniform distribution and number theory.">
+<meta name="author" content="Hikmet Burak Özcan">
+<meta property="og:title" content="Publications | Hikmet Burak Özcan">
+<meta property="og:description" content="Publications and preprints of Hikmet Burak Özcan in harmonic analysis, uniform distribution and number theory.">
+<meta property="og:image" content="https://hikburozc.github.io/hikmetburakozcan.github.io/hbo.jpg">
+<meta property="og:url" content="https://hikburozc.github.io/hikmetburakozcan.github.io/publications.html">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-<script>
-tailwind.config = {
-  darkMode: "class",
-  theme: {
-    extend: {
-      colors: {
-        "primary": "#0f49bd",
-        "background-light": "#f6f6f8",
-        "background-dark": "#101622",
-      },
-      fontFamily: { "display": ["Newsreader", "serif"] },
-    },
-  },
-}
-</script>
-
-<style>
-body { font-family: 'Newsreader', serif; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js"></script>
 </head>
-
-<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 transition-colors duration-300">
-<div class="min-h-screen flex flex-col">
-
-<!-- Header -->
-<header class="w-full border-b border-gray-200 dark:border-gray-700">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <!-- Logo -->
-    <div class="flex items-center gap-3">
-      <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2L1 9l4 1.5V17h2v-6h2v6h2v-6h2v6h2V10.5L23 9z"></path>
-        <path d="M12 4.132L19.982 9H4.018zM6 18h12v-1H6v1z"></path>
-      </svg>
-      <h1 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Hikmet Burak Özcan</h1>
-    </div>
-
-    <!-- Hamburger (mobile) -->
-    <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-      ☰
-    </button>
-
-    <!-- Navbar -->
-    <nav id="navbar" class="hidden md:flex flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-background-light dark:bg-background-dark md:bg-transparent md:dark:bg-transparent border-t md:border-0 border-gray-200 dark:border-gray-700 md:items-center md:gap-6 z-10">
-      <a href="index.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">About</a>
-      <a href="publications.html" class="block px-6 py-3 md:p-0 text-sm font-medium text-primary dark:text-primary">Publications</a>
-      <a href="teaching.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Teaching</a>
-      <a href="events.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Events</a>
-      <a href="art.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Art</a>
-      <a href="resume.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Resume</a>
-      <a href="contact.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Contact</a>
-    </nav>
-
-    <!-- Language & Theme -->
-    <div class="hidden md:flex items-center gap-4">
-      <div class="flex items-center gap-2 text-sm">
-        <button class="font-bold text-primary">EN</button>
-        <span class="text-gray-300 dark:text-gray-600">/</span>
-        <button class="hover:text-primary dark:hover:text-primary transition-colors">TR</button>
-      </div>
-      <button id="dark-toggle" class="ml-2 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">🌙</button>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Hikmet Burak Özcan<span>.</span></a>
+    <div class="nav-links"><a href="index.html">About</a><a href="publications.html" class="active">Publications</a><a href="teaching.html">Teaching</a><a href="events.html">Talks</a><a href="art.html">Art</a><a href="resume.html">CV</a></div>
+    <div class="nav-actions">
+      <a class="btn btn-primary nav-contact" href="contact.html">Contact</a>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch light or dark theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
-</header>
-
-<!-- Main -->
-<main class="flex-grow container mx-auto px-6 py-12 sm:py-16">
-  <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8">Publications</h2>
-
-  <!-- 2026 -->
-  <section class="mb-10">
-    <h3 class="text-xl sm:text-2xl font-semibold text-primary mb-4">2026</h3>
-    <ul class="space-y-4 text-base sm:text-lg text-gray-700 dark:text-gray-300">
-      <li>
-        <strong>Three-Term Difference Relations Do Not Detect Uniform Distribution</strong><br/>
-        Faruk Temur, Hikmet Burak Özcan<br/>
-        <em>Preprint</em>, 2026.
-        <a href="https://www.researchgate.net/publication/415098011_THREE-TERM_DIFFERENCE_RELATIONS_DO_NOT_DETECT_UNIFORM_DISTRIBUTION" class="text-primary hover:underline">[Research Gate]</a>
-      </li>
-      <li>
-        <strong>The Spectrum of (&xi;&alpha;<sup>n</sup>) Can Be Uncountable</strong><br/>
-        Hikmet Burak Özcan<br/>
-        <em>Preprint</em>, 2026.
-        <a href="https://arxiv.org/abs/2609.07714" class="text-primary hover:underline">[ArXiv]</a>
-      </li>
-    </ul>
-  </section>
-
-  <!-- 2025 -->
-  <section class="mb-10">
-    <h3 class="text-xl sm:text-2xl font-semibold text-primary mb-4">2025</h3>
-    <ul class="space-y-4 text-base sm:text-lg text-gray-700 dark:text-gray-300">
-      <li>
-        <strong>The Higher Regularity of the Discrete Hardy-Littlewood Maximal Function</strong><br/>
-        Faruk Temur, Hikmet Burak Özcan<br/>
-        <em>Preprint</em>, 2025.  
-        <a href="https://arxiv.org/abs/2504.13019" class="text-primary hover:underline">[ArXiv]</a>
-      </li>
-    </ul>
-  </section>
-
-  <!-- 2022 -->
-  <section class="mb-10">
-    <h3 class="text-xl sm:text-2xl font-semibold text-primary mb-4">2022</h3>
-    <ul class="space-y-4 text-base sm:text-lg text-gray-700 dark:text-gray-300">
-      <li>
-        <strong>The Green-Tao Theorem and the Infinitude of Primes in Domains</strong><br/>
-        Haydar Göral, Hikmet Burak Özcan, Doğa Can Sertbaş<br/>
-        <em>The American Mathematical Monthly</em>, 2022.  
-        <a href="https://doi.org/10.1080/00029890.2022.2141543" class="text-primary hover:underline">[DOI]</a>
-      </li>
-    </ul>
-  </section>
-
-  <!-- 2020 -->
-  <section class="mb-10">
-    <h3 class="text-xl sm:text-2xl font-semibold text-primary mb-4">2020</h3>
-    <ul class="space-y-4 text-base sm:text-lg text-gray-700 dark:text-gray-300">
-      <li>
-        <strong>Rings with Few Units and the Infinitude of Primes</strong><br/>
-        Hikmet Burak Özcan, Sedef Taşkın<br/>
-        <em>Hacettepe Journal of Mathematics and Statistics</em>, 2020.
-        <a href="https://doi.org/10.15672/hujms.649706" class="text-primary hover:underline">[DOI]</a>
-      </li>
-      <li>
-        <strong>Several Novel Proofs of the Infinitude of Primes</strong><br/>
-        Haydar Göral, Hikmet Burak Özcan<br/>
-        <em>The Mathematics Student</em>, 2020.  
-        <a href="https://www.researchgate.net/publication/357528932_Several_novel_proofs_of_the_infinitude_of_primes" class="text-primary hover:underline">[Research Gate]</a>
-      </li>
-    </ul>
-  </section>
-
-  <!-- Thesis -->
-  <section class="mb-10">
-    <h3 class="text-xl sm:text-2xl font-semibold text-primary mb-4">Master Thesis</h3>
-    <ul class="space-y-4 text-base sm:text-lg text-gray-700 dark:text-gray-300">
-      <li>
-        <strong>Prime Ideal Theorem on Number Fields</strong><br/>
-        <em>Supervisor:</em> Haydar Göral<br/>
-        <em>Dokuz Eylül University</em>, 2020.  
-        <a href="hbo_msc_thesis.pdf" class="text-primary hover:underline">[Thesis]</a>
-      </li>
-    </ul>
-  </section>
-</main>
-
-<!-- Footer -->
-<footer class="border-t border-gray-200 dark:border-gray-700 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
-  © 2026 Hikmet Burak Özcan — All rights reserved.
-</footer>
+  <div class="mobile-menu" id="mobile-menu"><a href="index.html">About</a><a href="publications.html" class="active">Publications</a><a href="teaching.html">Teaching</a><a href="events.html">Talks</a><a href="art.html">Art</a><a href="resume.html">CV</a><a href="contact.html">Contact</a></div>
+</nav>
+<main>
+<div class="wrap">
+<header class="page-head"><span class="eyebrow">Research</span><h1>Publications</h1><p>Articles and preprints in harmonic analysis, uniform distribution and number theory.</p></header><section class="section"><h2 class="section-title">Articles and Preprints</h2><div class="list"><article class="card">
+  <div class="card-top"><span class="meta">2026 · Preprint [6]</span></div>
+  <h3>Three-term difference relations do not detect uniform distribution</h3>
+  <p>Faruk Temur, <span class="me">Hikmet Burak Özcan</span></p>
+  <p class="sub">Preprint, 2026.</p>
+  <div class="pills"><a class="pill" href="https://www.researchgate.net/publication/415098011_THREE-TERM_DIFFERENCE_RELATIONS_DO_NOT_DETECT_UNIFORM_DISTRIBUTION" target="_blank" rel="noopener">ResearchGate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article><article class="card">
+  <div class="card-top"><span class="meta">2026 · Preprint [5]</span></div>
+  <h3>The spectrum of (ξα<sup>n</sup>) can be uncountable</h3>
+  <p><span class="me">Hikmet Burak Özcan</span></p>
+  <p class="sub">Preprint, 2026.</p>
+  <div class="pills"><a class="pill" href="https://arxiv.org/abs/2609.07714" target="_blank" rel="noopener">arXiv <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article><article class="card">
+  <div class="card-top"><span class="meta">2025 · Preprint [4]</span></div>
+  <h3>The higher regularity of the discrete Hardy–Littlewood maximal function</h3>
+  <p>Faruk Temur, <span class="me">Hikmet Burak Özcan</span></p>
+  <p class="sub">Preprint, 2025.</p>
+  <div class="pills"><a class="pill" href="https://arxiv.org/abs/2504.13019" target="_blank" rel="noopener">arXiv <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article><article class="card">
+  <div class="card-top"><span class="meta">2022 · Article [3]</span></div>
+  <h3>The Green–Tao theorem and the infinitude of primes in domains</h3>
+  <p>Haydar Göral, <span class="me">Hikmet Burak Özcan</span>, Doğa Can Sertbaş</p>
+  <p class="sub"><em>The American Mathematical Monthly</em>, 2022.</p>
+  <div class="pills"><a class="pill" href="https://doi.org/10.1080/00029890.2022.2141543" target="_blank" rel="noopener">DOI <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article><article class="card">
+  <div class="card-top"><span class="meta">2020 · Article [2]</span></div>
+  <h3>Rings with few units and the infinitude of primes</h3>
+  <p><span class="me">Hikmet Burak Özcan</span>, Sedef Taşkın</p>
+  <p class="sub"><em>Hacettepe Journal of Mathematics and Statistics</em>, 2020.</p>
+  <div class="pills"><a class="pill" href="https://doi.org/10.15672/hujms.649706" target="_blank" rel="noopener">DOI <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article><article class="card">
+  <div class="card-top"><span class="meta">2020 · Article [1]</span></div>
+  <h3>Several novel proofs of the infinitude of primes</h3>
+  <p>Haydar Göral, <span class="me">Hikmet Burak Özcan</span></p>
+  <p class="sub"><em>The Mathematics Student</em>, 2020.</p>
+  <div class="pills"><a class="pill" href="https://www.researchgate.net/publication/357528932_Several_novel_proofs_of_the_infinitude_of_primes" target="_blank" rel="noopener">ResearchGate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article></div></section><section class="section"><h2 class="section-title">Theses</h2><div class="grid grid-2">
+<article class="card card-feature">
+  <span class="meta">Ph.D. Thesis · 2026</span>
+  <h3>On Regularity of Hardy–Littlewood Maximal Operators</h3>
+  <p class="sub">Supervisor: Faruk Temur · İzmir Institute of Technology</p>
+</article>
+<article class="card">
+  <span class="meta">M.Sc. Thesis · 2020</span>
+  <h3>Prime Ideal Theorem on Number Fields</h3>
+  <p class="sub">Supervisor: Haydar Göral · Dokuz Eylül University</p>
+  <div class="pills"><a class="pill" href="Events/hbo_msc_thesis.pdf" target="_blank" rel="noopener">Thesis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article>
+</div></section>
 </div>
-
-<!-- Scripts -->
-<script>
-// Dark mode
-document.getElementById('dark-toggle')?.addEventListener('click', () => {
-  document.documentElement.classList.toggle('dark');
-});
-
-// Mobile menu toggle
-const menuToggle = document.getElementById('menu-toggle');
-const navbar = document.getElementById('navbar');
-menuToggle?.addEventListener('click', () => {
-  navbar.classList.toggle('hidden');
-});
-</script>
-
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <p>© 2026 Hikmet Burak Özcan · Department of Mathematics, İzmir Institute of Technology</p>
+    <p><a href="mailto:hikmetozcan@iyte.edu.tr">hikmetozcan@iyte.edu.tr</a></p>
+  </div>
+</footer>
 </body>
 </html>

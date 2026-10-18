@@ -1,162 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Art - Hikmet Burak Özcan</title>
-
-<!-- Google Fonts & Tailwind -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-<script>
-tailwind.config = {
-    darkMode: "class",
-    theme: {
-        extend: {
-            colors: {
-                "primary": "#0f49bd",
-                "background-light": "#f6f6f8",
-                "background-dark": "#101622",
-            },
-            fontFamily: { "display": ["Newsreader", "serif"] },
-        },
-    },
-}
-</script>
-
-<style>
-body { font-family: 'Newsreader', serif; }
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photographs and Drawings | Hikmet Burak Özcan</title>
+<meta name="description" content="Drawings and travel photographs by Hikmet Burak Özcan.">
+<meta name="author" content="Hikmet Burak Özcan">
+<meta property="og:title" content="Photographs and Drawings | Hikmet Burak Özcan">
+<meta property="og:description" content="Drawings and travel photographs by Hikmet Burak Özcan.">
+<meta property="og:image" content="https://hikburozc.github.io/hikmetburakozcan.github.io/hbo.jpg">
+<meta property="og:url" content="https://hikburozc.github.io/hikmetburakozcan.github.io/art.html">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js"></script>
 </head>
-
-<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 transition-colors duration-300 flex flex-col min-h-screen">
-
-<!-- Header -->
-<header class="w-full border-b border-gray-200 dark:border-gray-700">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <!-- Logo -->
-    <div class="flex items-center gap-3">
-      <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2L1 9l4 1.5V17h2v-6h2v6h2v-6h2v6h2V10.5L23 9z"></path>
-      </svg>
-      <h1 class="text-xl font-bold text-gray-900 dark:text-white">Hikmet Burak Özcan</h1>
-    </div>
-
-    <!-- Hamburger (mobile) -->
-    <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-      ☰
-    </button>
-
-    <!-- Navbar -->
-    <nav id="navbar" class="hidden md:flex flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-background-light dark:bg-background-dark md:bg-transparent md:dark:bg-transparent border-t md:border-0 border-gray-200 dark:border-gray-700 md:items-center md:gap-6 z-10">
-      <a href="index.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">About</a>
-      <a href="publications.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Publications</a>
-      <a href="teaching.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Teaching</a>
-      <a href="events.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Events</a>
-      <a href="art.html" class="block px-6 py-3 md:p-0 text-sm font-medium text-primary dark:text-primary">Art</a>
-      <a href="resume.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Resume</a>
-      <a href="contact.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
-    </nav>
-
-    <!-- Language & Theme -->
-    <div class="hidden md:flex items-center gap-4">
-      <div class="flex items-center gap-2 text-sm">
-        <button class="font-bold text-primary">EN</button>
-        <span class="text-gray-300 dark:text-gray-600">/</span>
-        <button class="hover:text-primary dark:hover:text-primary transition-colors">TR</button>
-      </div>
-      <button id="dark-toggle" class="ml-2 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">🌙</button>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Hikmet Burak Özcan<span>.</span></a>
+    <div class="nav-links"><a href="index.html">About</a><a href="publications.html">Publications</a><a href="teaching.html">Teaching</a><a href="events.html">Talks</a><a href="art.html" class="active">Art</a><a href="resume.html">CV</a></div>
+    <div class="nav-actions">
+      <a class="btn btn-primary nav-contact" href="contact.html">Contact</a>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch light or dark theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
-</header>
-
-<!-- Main -->
-<main class="flex-grow container mx-auto max-w-screen-lg px-4 sm:px-6 py-10">
-  <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6 text-center">Photographs & Drawings</h2>
-
-  <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto text-center">
-    Outside of mathematics, I have a deep interest in black-and-white drawing and photography.
-    Here, you can find a selection of my drawings and photographs taken during my travels.
-  </p>
-
-  <!-- Art Gallery -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-    <div class="rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-      <img src="Photos/cologne_catedral.jpg" alt="Cologne Cathedral" 
-           class="w-full h-56 sm:h-60 md:h-56 object-cover cursor-pointer" 
-           onclick="openModal(this)">
-      <div class="p-4">
-        <h3 class="font-semibold text-lg mb-2">Cologne Cathedral</h3>
-        <p class="text-gray-600 dark:text-gray-400 text-sm">A magnificent example of Gothic architecture rising above the city of Cologne.</p>
-      </div>
-    </div>
-
-    <div class="rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-      <img src="Photos/london_red_buses.jpg" alt="London Red Buses" 
-           class="w-full h-56 sm:h-60 md:h-56 object-cover cursor-pointer" 
-           onclick="openModal(this)">
-      <div class="p-4">
-        <h3 class="font-semibold text-lg mb-2">London’s Iconic Red Buses</h3>
-        <p class="text-gray-600 dark:text-gray-400 text-sm">A timeless symbol of the city, bringing life and color to the streets of London.</p>
-      </div>
-    </div>
-
-    <div class="rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-      <img src="Photos/firenze.jpg" alt="View of Florence from Piazzale Michelangelo" 
-           class="w-full h-56 sm:h-60 md:h-56 object-cover cursor-pointer" 
-           onclick="openModal(this)">
-      <div class="p-4">
-        <h3 class="font-semibold text-lg mb-2">View of Florence from Piazzale Michelangelo</h3>
-        <p class="text-gray-600 dark:text-gray-400 text-sm">A breathtaking panorama of Florence, where the city’s timeless beauty meets the soft glow of the Tuscan sunset.</p>
-      </div>
-    </div>
-  </div>
-</main>
-
-<!-- Modal -->
-<div id="imageModal" class="fixed inset-0 hidden bg-black bg-opacity-80 flex items-center justify-center z-50" onclick="closeModal()">
-  <span class="absolute top-4 right-4 sm:top-6 sm:right-8 text-white text-3xl cursor-pointer" onclick="closeModal(event)">&times;</span>
-  <img id="modalImage" class="max-w-full sm:max-w-4xl max-h-[80vh] sm:max-h-[90vh] rounded-lg shadow-lg" onclick="event.stopPropagation()">
+  <div class="mobile-menu" id="mobile-menu"><a href="index.html">About</a><a href="publications.html">Publications</a><a href="teaching.html">Teaching</a><a href="events.html">Talks</a><a href="art.html" class="active">Art</a><a href="resume.html">CV</a><a href="contact.html">Contact</a></div>
+</nav>
+<main>
+<div class="wrap">
+<header class="page-head"><span class="eyebrow">Beyond Mathematics</span><h1>Photographs and Drawings</h1><p>Outside of mathematics, I enjoy black-and-white drawing and photography. Here is a small selection from my travels.</p></header><section class="section gallery"><div class="grid grid-3"><article class="card">
+  <img src="Photos/cologne_catedral.jpg" alt="Cologne Cathedral" loading="lazy" data-zoom>
+  <div class="body"><h3>Cologne Cathedral</h3><p class="sub">A magnificent example of Gothic architecture rising above the city of Cologne.</p></div>
+</article><article class="card">
+  <img src="Photos/london_red_buses.jpg" alt="London Red Buses" loading="lazy" data-zoom>
+  <div class="body"><h3>London’s Iconic Red Buses</h3><p class="sub">A timeless symbol of the city, bringing life and color to the streets of London.</p></div>
+</article><article class="card">
+  <img src="Photos/firenze.jpg" alt="View of Florence from Piazzale Michelangelo" loading="lazy" data-zoom>
+  <div class="body"><h3>View of Florence from Piazzale Michelangelo</h3><p class="sub">A breathtaking panorama of Florence, where the city’s timeless beauty meets the soft glow of the Tuscan sunset.</p></div>
+</article></div></section><div class="modal" id="modal" role="dialog" aria-label="Image viewer"><button type="button" aria-label="Close">&times;</button><img alt=""></div>
 </div>
-
-<!-- Footer -->
-<footer class="border-t border-gray-200 dark:border-gray-700 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
-  © 2026 Hikmet Burak Özcan — All rights reserved.
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <p>© 2026 Hikmet Burak Özcan · Department of Mathematics, İzmir Institute of Technology</p>
+    <p><a href="mailto:hikmetozcan@iyte.edu.tr">hikmetozcan@iyte.edu.tr</a></p>
+  </div>
 </footer>
-
-<!-- Scripts -->
-<script>
-// Dark mode toggle
-document.getElementById('dark-toggle')?.addEventListener('click', () => {
-  document.documentElement.classList.toggle('dark');
-});
-
-// Mobile menu toggle
-const menuToggle = document.getElementById('menu-toggle');
-const navbar = document.getElementById('navbar');
-menuToggle?.addEventListener('click', () => {
-  navbar.classList.toggle('hidden');
-});
-
-// Modal functions
-function openModal(imgElement) {
-  const modal = document.getElementById("imageModal");
-  const modalImg = document.getElementById("modalImage");
-  modal.classList.remove("hidden");
-  modalImg.src = imgElement.src;
-}
-
-function closeModal(event) {
-  if (event) event.stopPropagation();
-  document.getElementById("imageModal").classList.add("hidden");
-}
-
-document.addEventListener("keydown", function(event) {
-  if (event.key === "Escape") closeModal();
-});
-</script>
 </body>
 </html>

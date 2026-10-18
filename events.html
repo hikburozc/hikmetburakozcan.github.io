@@ -1,203 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Academic Events - Hikmet Burak Özcan</title>
-
-<!-- Fonts & Tailwind -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talks and Events | Hikmet Burak Özcan</title>
+<meta name="description" content="Seminar and conference talks of Hikmet Burak Özcan, with slides and posters.">
+<meta name="author" content="Hikmet Burak Özcan">
+<meta property="og:title" content="Talks and Events | Hikmet Burak Özcan">
+<meta property="og:description" content="Seminar and conference talks of Hikmet Burak Özcan, with slides and posters.">
+<meta property="og:image" content="https://hikburozc.github.io/hikmetburakozcan.github.io/hbo.jpg">
+<meta property="og:url" content="https://hikburozc.github.io/hikmetburakozcan.github.io/events.html">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-<script>
-tailwind.config = {
-  darkMode: "class",
-  theme: {
-    extend: {
-      colors: {
-        "primary": "#0f49bd",
-        "background-light": "#f6f6f8",
-        "background-dark": "#101622",
-      },
-      fontFamily: { "display": ["Newsreader", "serif"] },
-    },
-  },
-}
-</script>
-
-<style>
-body { font-family: 'Newsreader', serif; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js"></script>
 </head>
-
-<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 transition-colors duration-300">
-<div class="min-h-screen flex flex-col">
-
-<!-- Header -->
-<header class="w-full border-b border-gray-200 dark:border-gray-700">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <!-- Logo -->
-    <div class="flex items-center gap-3">
-      <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2L1 9l4 1.5V17h2v-6h2v6h2v-6h2v6h2V10.5L23 9z"></path>
-      </svg>
-      <h1 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Hikmet Burak Özcan</h1>
-    </div>
-
-    <!-- Hamburger (mobile) -->
-    <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-      ☰
-    </button>
-
-    <!-- Navbar -->
-    <nav id="navbar" class="hidden md:flex flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-background-light dark:bg-background-dark md:bg-transparent md:dark:bg-transparent border-t md:border-0 border-gray-200 dark:border-gray-700 md:items-center md:gap-6 z-10">
-      <a href="index.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">About</a>
-      <a href="publications.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Publications</a>
-      <a href="teaching.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Teaching</a>
-      <a href="events.html" class="block px-6 py-3 md:p-0 text-sm font-medium text-primary dark:text-primary">Events</a>
-      <a href="art.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Art</a>
-      <a href="resume.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Resume</a>
-      <a href="contact.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Contact</a>
-    </nav>
-
-    <!-- Language & Theme -->
-    <div class="hidden md:flex items-center gap-4">
-      <div class="flex items-center gap-2 text-sm">
-        <button class="font-bold text-primary">EN</button>
-        <span class="text-gray-300 dark:text-gray-600">/</span>
-        <button class="hover:text-primary dark:hover:text-primary transition-colors">TR</button>
-      </div>
-      <button id="dark-toggle" class="ml-2 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">🌙</button>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Hikmet Burak Özcan<span>.</span></a>
+    <div class="nav-links"><a href="index.html">About</a><a href="publications.html">Publications</a><a href="teaching.html">Teaching</a><a href="events.html" class="active">Talks</a><a href="art.html">Art</a><a href="resume.html">CV</a></div>
+    <div class="nav-actions">
+      <a class="btn btn-primary nav-contact" href="contact.html">Contact</a>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch light or dark theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
-</header>
-
-<!-- Main Content -->
-<main class="flex-grow container mx-auto px-6 py-12 sm:py-16">
-  <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8">Academic Events</h2>
-
-  <!-- Upcoming Events -->
-  <section class="mb-12">
-    <h3 class="text-2xl font-semibold text-primary mb-4">Upcoming Events</h3>
-    <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-      <ul class="space-y-4">
-        
-      </ul>
-    </div>
-  </section>
-
-  <!-- Past Events -->
-  <section>
-    <h3 class="text-2xl font-semibold text-primary mb-6">Past Events</h3>
-    <ul class="space-y-6">
-      <li class="border-l-4 border-primary pl-4">
-        <h4 class="text-lg sm:text-xl font-semibold">On Higher Regularity of Discrete Hardy-Littlewood Maximal Function</h4>
-        <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base">2nd Atlantic Conference in Nonlinear PDEs & Harmonic Analysis, Instituto Superior Técnico - Universidade de Lisboa — November 2025</p>
-        <a href="Events/2nd_Atlantic_Conference_in_Nonlinear_PDEs_Nov2025.pdf" class="text-primary hover:underline text-sm">[Poster]</a>
-      </li>
-
-      <li class="border-l-4 border-primary pl-4">
-        <h4 class="text-lg sm:text-xl font-semibold">The Higher Regularity of the Hardy-Littlewood Maximal Function</h4>
-        <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base">İzmir Mathematics Day 7, Ege University — September 2025</p>
-        <a href="Events/IMG7_Sep2025.pdf" class="text-primary hover:underline text-sm">[Slides]</a>
-      </li>
-
-      <li class="border-l-4 border-primary pl-4">
-        <h4 class="text-lg sm:text-xl font-semibold">On the Regularity of the Discrete Hardy-Littlewood Maximal Function</h4>
-        <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base">I. Workshop on Applied Mathematics and Statistics, İzmir University of Economics — May 2025</p>
-        <a href="Events/I.WAMS_May2025.pdf" class="text-primary hover:underline text-sm">[Slides]</a>
-      </li>
-
-      <li class="border-l-4 border-primary pl-4">
-        <h4 class="text-lg sm:text-xl font-semibold">Discretization Approach to the Weak Boundedness of Maximal Convolution Operators</h4>
-        <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Seminars of the Department of Mathematics, IZTECH — January 2025</p>
-        <a href="Events/IZTECHMathSeminar_Jan2025.pdf" class="text-primary hover:underline text-sm">[Slides]</a>
-      </li>
-
-      <li class="border-l-4 border-primary pl-4">
-        <h4 class="text-lg sm:text-xl font-semibold">Hardy-Littlewood Maximal Function</h4>
-        <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Seminars of the Department of Mathematics, FernUniversitat in Hagen — July 2024</p>
-        <a href="Events/FernUniversitat_Hagen_MathSeminar_July2024.pdf" class="text-primary hover:underline text-sm">[Slides]</a>
-      </li>
-
-      <li class="border-l-4 border-primary pl-4">
-        <h4 class="text-lg sm:text-xl font-semibold">Hardy-Littlewood Maximal Function Theorem</h4>
-        <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Seminars of the Department of Mathematics, IZTECH — May 2022</p>
-        <a href="Events/IZTECHMathSeminar_May2022.pdf" class="text-primary hover:underline text-sm">[Slides]</a>
-      </li>
-
-      <li class="border-l-4 border-primary pl-4">
-        <h4 class="text-lg sm:text-xl font-semibold">A Bridge Between Additive Combinatorics and the Infinitude of Prime Numbers</h4>
-        <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Seminars of the Department of Mathematics, IZTECH — November 2021</p>
-        <a href="Events/IZTECHMathSeminar_Nov2021.pdf" class="text-primary hover:underline text-sm">[Slides]</a>
-      </li>
-
-      <li class="border-l-4 border-primary pl-4">
-        <h4 class="text-lg sm:text-xl font-semibold">Mathematicians Will Never Stop to Provide New Proofs of the Infinitude of Primes</h4>
-        <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base">İzmir Mathematics Days 3, Dokuz Eylül University — October 2020</p>
-        <a href="Events/IMG3_Oct2020.pdf" class="text-primary hover:underline text-sm">[Slides]</a>
-      </li>
-
-      <li class="border-l-4 border-primary pl-4">
-        <h4 class="text-lg sm:text-xl font-semibold">Prime Ideal Theorem on Number Fields</h4>
-        <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Seminars of the Department of Mathematics, Dokuz Eylül University — December 2019</p>
-        <a href="Events/DEUMathSeminar_Dec2019.pdf" class="text-primary hover:underline text-sm">[Slides]</a>
-      </li>
-
-      <li class="border-l-4 border-primary pl-4">
-        <h4 class="text-lg sm:text-xl font-semibold">Sayı Cisimlerinde Asal İdeal Teoremi</h4>
-        <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base">32. Ulusal Matematik Sempozyumu, Ondokuz Mayıs Üniversitesi — Eylül 2019</p>
-        <a href="Events/32UMS_Eylul2019.pdf" class="text-primary hover:underline text-sm">[Slides]</a>
-      </li>
-
-      <li class="border-l-4 border-primary pl-4">
-        <h4 class="text-lg sm:text-xl font-semibold">A Special Case of Fermat's Last Theorem</h4>
-        <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Algebra Workshop, Manisa Celal Bayar University — September 2019</p>
-        <a href="Events/MSCU_AlgebraWorkshop_Sep2019.pdf" class="text-primary hover:underline text-sm">[Slides]</a>
-      </li>
-
-      <li class="border-l-4 border-primary pl-4">
-        <h4 class="text-lg sm:text-xl font-semibold">Prime Ideal Theorem on Number Fields</h4>
-        <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base">İzmir Mathematics Days 2, Dokuz Eylül University — September 2019</p>
-        <a href="Events/IMG2_Sep2019.pdf" class="text-primary hover:underline text-sm">[Slides]</a>
-      </li>
-
-      <li class="border-l-4 border-primary pl-4">
-        <h4 class="text-lg sm:text-xl font-semibold">Congruent Number Problem</h4>
-        <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Seminars of the Department of Mathematics, Dokuz Eylül University — November 2018</p>
-        <a href="Events/DEUMathSeminar_Nov2018.pdf" class="text-primary hover:underline text-sm">[Slides]</a>
-      </li>
-
-      <li class="border-l-4 border-primary pl-4">
-        <h4 class="text-lg sm:text-xl font-semibold">Krull-Schmidt-Remak-Azumaya Theorem</h4>
-        <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base">İzmir Mathematics Days 1, Yaşar University — June 2018</p>
-        <a href="Events/IMG1_June2018.pdf" class="text-primary hover:underline text-sm">[Slides]</a>
-      </li>
-    </ul>
-  </section>
+  <div class="mobile-menu" id="mobile-menu"><a href="index.html">About</a><a href="publications.html">Publications</a><a href="teaching.html">Teaching</a><a href="events.html" class="active">Talks</a><a href="art.html">Art</a><a href="resume.html">CV</a><a href="contact.html">Contact</a></div>
+</nav>
+<main>
+<div class="wrap">
+<header class="page-head"><span class="eyebrow">Talks</span><h1>Talks and Events</h1><p>14 seminar and conference talks since 2018, with slides and posters.</p></header><div class="year-block"><div class="year-label">2025</div><div class="list"><article class="card">
+  <span class="meta">November 2025 · Poster</span>
+  <h3>On Higher Regularity of Discrete Hardy-Littlewood Maximal Function</h3>
+  <p class="sub">2nd Atlantic Conference in Nonlinear PDEs & Harmonic Analysis, Instituto Superior Técnico - Universidade de Lisboa</p>
+  <div class="pills"><a class="pill" href="Events/2nd_Atlantic_Conference_in_Nonlinear_PDEs_Nov2025.pdf" target="_blank" rel="noopener">Poster <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article><article class="card">
+  <span class="meta">September 2025 · Slides</span>
+  <h3>The Higher Regularity of the Hardy-Littlewood Maximal Function</h3>
+  <p class="sub">İzmir Mathematics Day 7, Ege University</p>
+  <div class="pills"><a class="pill" href="Events/IMG7_Sep2025.pdf" target="_blank" rel="noopener">Slides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article><article class="card">
+  <span class="meta">May 2025 · Slides</span>
+  <h3>On the Regularity of the Discrete Hardy-Littlewood Maximal Function</h3>
+  <p class="sub">I. Workshop on Applied Mathematics and Statistics, İzmir University of Economics</p>
+  <div class="pills"><a class="pill" href="Events/I.WAMS_May2025.pdf" target="_blank" rel="noopener">Slides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article><article class="card">
+  <span class="meta">January 2025 · Slides</span>
+  <h3>Discretization Approach to the Weak Boundedness of Maximal Convolution Operators</h3>
+  <p class="sub">Seminars of the Department of Mathematics, IZTECH</p>
+  <div class="pills"><a class="pill" href="Events/IZTECHMathSeminar_Jan2025.pdf" target="_blank" rel="noopener">Slides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article></div></div><div class="year-block"><div class="year-label">2024</div><div class="list"><article class="card">
+  <span class="meta">July 2024 · Slides</span>
+  <h3>Hardy-Littlewood Maximal Function</h3>
+  <p class="sub">Seminars of the Department of Mathematics, FernUniversitat in Hagen</p>
+  <div class="pills"><a class="pill" href="Events/FernUniversitat_Hagen_MathSeminar_July2024.pdf" target="_blank" rel="noopener">Slides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article></div></div><div class="year-block"><div class="year-label">2022</div><div class="list"><article class="card">
+  <span class="meta">May 2022 · Slides</span>
+  <h3>Hardy-Littlewood Maximal Function Theorem</h3>
+  <p class="sub">Seminars of the Department of Mathematics, IZTECH</p>
+  <div class="pills"><a class="pill" href="Events/IZTECHMathSeminar_May2022.pdf" target="_blank" rel="noopener">Slides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article></div></div><div class="year-block"><div class="year-label">2021</div><div class="list"><article class="card">
+  <span class="meta">November 2021 · Slides</span>
+  <h3>A Bridge Between Additive Combinatorics and the Infinitude of Prime Numbers</h3>
+  <p class="sub">Seminars of the Department of Mathematics, IZTECH</p>
+  <div class="pills"><a class="pill" href="Events/IZTECHMathSeminar_Nov2021.pdf" target="_blank" rel="noopener">Slides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article></div></div><div class="year-block"><div class="year-label">2020</div><div class="list"><article class="card">
+  <span class="meta">October 2020 · Slides</span>
+  <h3>Mathematicians Will Never Stop to Provide New Proofs of the Infinitude of Primes</h3>
+  <p class="sub">İzmir Mathematics Days 3, Dokuz Eylül University</p>
+  <div class="pills"><a class="pill" href="Events/IMG3_Oct2020.pdf" target="_blank" rel="noopener">Slides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article></div></div><div class="year-block"><div class="year-label">2019</div><div class="list"><article class="card">
+  <span class="meta">December 2019 · Slides</span>
+  <h3>Prime Ideal Theorem on Number Fields</h3>
+  <p class="sub">Seminars of the Department of Mathematics, Dokuz Eylül University</p>
+  <div class="pills"><a class="pill" href="Events/DEUMathSeminar_Dec2019.pdf" target="_blank" rel="noopener">Slides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article><article class="card">
+  <span class="meta">Eylül 2019 · Slides</span>
+  <h3>Sayı Cisimlerinde Asal İdeal Teoremi</h3>
+  <p class="sub">32. Ulusal Matematik Sempozyumu, Ondokuz Mayıs Üniversitesi</p>
+  <div class="pills"><a class="pill" href="Events/32UMS_Eylul2019.pdf" target="_blank" rel="noopener">Slides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article><article class="card">
+  <span class="meta">September 2019 · Slides</span>
+  <h3>A Special Case of Fermat's Last Theorem</h3>
+  <p class="sub">Algebra Workshop, Manisa Celal Bayar University</p>
+  <div class="pills"><a class="pill" href="Events/MSCU_AlgebraWorkshop_Sep2019.pdf" target="_blank" rel="noopener">Slides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article><article class="card">
+  <span class="meta">September 2019 · Slides</span>
+  <h3>Prime Ideal Theorem on Number Fields</h3>
+  <p class="sub">İzmir Mathematics Days 2, Dokuz Eylül University</p>
+  <div class="pills"><a class="pill" href="Events/IMG2_Sep2019.pdf" target="_blank" rel="noopener">Slides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article></div></div><div class="year-block"><div class="year-label">2018</div><div class="list"><article class="card">
+  <span class="meta">November 2018 · Slides</span>
+  <h3>Congruent Number Problem</h3>
+  <p class="sub">Seminars of the Department of Mathematics, Dokuz Eylül University</p>
+  <div class="pills"><a class="pill" href="Events/DEUMathSeminar_Nov2018.pdf" target="_blank" rel="noopener">Slides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article><article class="card">
+  <span class="meta">June 2018 · Slides</span>
+  <h3>Krull-Schmidt-Remak-Azumaya Theorem</h3>
+  <p class="sub">İzmir Mathematics Days 1, Yaşar University</p>
+  <div class="pills"><a class="pill" href="Events/IMG1_June2018.pdf" target="_blank" rel="noopener">Slides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article></div></div>
+</div>
 </main>
-
-<!-- Footer -->
-<footer class="border-t border-gray-200 dark:border-gray-700 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
-  © 2026 Hikmet Burak Özcan — All rights reserved.
+<footer class="footer">
+  <div class="wrap">
+    <p>© 2026 Hikmet Burak Özcan · Department of Mathematics, İzmir Institute of Technology</p>
+    <p><a href="mailto:hikmetozcan@iyte.edu.tr">hikmetozcan@iyte.edu.tr</a></p>
+  </div>
 </footer>
-
-<!-- Scripts -->
-<script>
-// Dark mode
-document.getElementById('dark-toggle')?.addEventListener('click', () => {
-  document.documentElement.classList.toggle('dark');
-});
-
-// Mobile menu toggle
-const menuToggle = document.getElementById('menu-toggle');
-const navbar = document.getElementById('navbar');
-menuToggle?.addEventListener('click', () => {
-  navbar.classList.toggle('hidden');
-});
-</script>
-
 </body>
 </html>

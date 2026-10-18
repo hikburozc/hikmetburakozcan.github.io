@@ -1,134 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Teaching - Hikmet Burak Özcan</title>
-
-<!-- Fonts & Tailwind -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teaching | Hikmet Burak Özcan</title>
+<meta name="description" content="Teaching materials of Hikmet Burak Özcan at İzmir Institute of Technology: calculus, analytic geometry, probability and statistics.">
+<meta name="author" content="Hikmet Burak Özcan">
+<meta property="og:title" content="Teaching | Hikmet Burak Özcan">
+<meta property="og:description" content="Teaching materials of Hikmet Burak Özcan at İzmir Institute of Technology: calculus, analytic geometry, probability and statistics.">
+<meta property="og:image" content="https://hikburozc.github.io/hikmetburakozcan.github.io/hbo.jpg">
+<meta property="og:url" content="https://hikburozc.github.io/hikmetburakozcan.github.io/teaching.html">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-<script>
-tailwind.config = {
-  darkMode: "class",
-  theme: {
-    extend: {
-      colors: {
-        primary: "#0f49bd",
-        "background-light": "#f6f6f8",
-        "background-dark": "#101622",
-      },
-      fontFamily: { display: ["Newsreader", "serif"] },
-    },
-  },
-}
-</script>
-
-<style>
-body { font-family: 'Newsreader', serif; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js"></script>
 </head>
-
-<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 transition-colors duration-300">
-<div class="min-h-screen flex flex-col">
-
-<!-- Header -->
-<header class="w-full border-b border-gray-200 dark:border-gray-700">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <!-- Logo -->
-    <div class="flex items-center gap-3">
-      <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2L1 9l4 1.5V17h2v-6h2v6h2v-6h2v6h2V10.5L23 9z"></path>
-      </svg>
-      <h1 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Hikmet Burak Özcan</h1>
-    </div>
-
-    <!-- Hamburger (mobile) -->
-    <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-      ☰
-    </button>
-
-    <!-- Navbar -->
-    <nav id="navbar" class="hidden md:flex flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto bg-background-light dark:bg-background-dark md:bg-transparent md:dark:bg-transparent border-t md:border-0 border-gray-200 dark:border-gray-700 md:items-center md:gap-6 z-10">
-      <a href="index.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">About</a>
-      <a href="publications.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Publications</a>
-      <a href="teaching.html" class="block px-6 py-3 md:p-0 text-sm font-medium text-primary dark:text-primary">Teaching</a>
-      <a href="events.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Events</a>
-      <a href="art.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Art</a>
-      <a href="resume.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Resume</a>
-      <a href="contact.html" class="block px-6 py-3 md:p-0 text-sm font-medium hover:text-primary dark:hover:text-primary">Contact</a>
-    </nav>
-
-    <!-- Language & Theme -->
-    <div class="hidden md:flex items-center gap-4">
-      <div class="flex items-center gap-2 text-sm">
-        <button class="font-bold text-primary">EN</button>
-        <span class="text-gray-300 dark:text-gray-600">/</span>
-        <button class="hover:text-primary dark:hover:text-primary transition-colors">TR</button>
-      </div>
-      <button id="dark-toggle" class="ml-2 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">🌙</button>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Hikmet Burak Özcan<span>.</span></a>
+    <div class="nav-links"><a href="index.html">About</a><a href="publications.html">Publications</a><a href="teaching.html" class="active">Teaching</a><a href="events.html">Talks</a><a href="art.html">Art</a><a href="resume.html">CV</a></div>
+    <div class="nav-actions">
+      <a class="btn btn-primary nav-contact" href="contact.html">Contact</a>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch light or dark theme"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
-</header>
-
-<!-- Main Content -->
-<main class="flex-grow container mx-auto px-6 py-12 sm:py-16 max-w-screen-lg">
-  <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8">Teaching</h2>
-
-  <!-- Current Semester -->
-  <section class="mb-12">
-    <h3 class="text-2xl font-semibold text-primary mb-4">2025–2026 Fall Semester</h3>
-    <ul class="space-y-6 text-base sm:text-lg text-gray-700 dark:text-gray-300">
-      
-      <li class="border-l-4 border-primary pl-4">
-        <strong>MATH 141 – Basic Calculus I</strong><br/>
-        <a href="Math141_Fall25/Math141_Fall25_Syllabus.pdf" class="text-primary hover:underline">[Syllabus]</a> |
-        <a href="Math141_Fall25/Math141_Fall25_RecitationClasses.html" class="text-primary hover:underline">[Recitation Classes]</a> |
-        <a href="Math141_Fall25/Math141_Fall25_LectureNotes.html" class="text-primary hover:underline">[Lecture Notes]</a> |
-        <a href="Math141_Fall25/Math141_Fall25_Exams.html" class="text-primary hover:underline">[Exams]</a>
-      </li>
-
-      <li class="border-l-4 border-primary pl-4">
-        <strong>MATH 145 – Calculus for Engineering and Science I</strong><br/>
-        <a href="#" class="text-primary hover:underline">[Syllabus]</a> |
-        <a href="Math145_Fall25/Math145_Fall25_RecitationClasses.html" class="text-primary hover:underline">[Recitation Classes]</a> |
-        <a href="Math145_Fall25/Math145_Fall25_Exams.html" class="text-primary hover:underline">[Exams]</a>
-      </li>
-
-      <li class="border-l-4 border-primary pl-4">
-        <strong>MATH 111 – Analytic Geometry</strong><br/>
-        <a href="Math111_Fall25/Math111_Fall25_Syllabus.pdf" class="text-primary hover:underline">[Syllabus]</a> |
-        <a href="Math111_Fall25/Math111_Fall25_Exams.html" class="text-primary hover:underline">[Exams]</a>
-      </li>
-
-    </ul>
-  </section>
-</main>
-
-<!-- Footer -->
-<footer class="border-t border-gray-200 dark:border-gray-700 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
-  © 2026 Hikmet Burak Özcan — All rights reserved.
-</footer>
-
+  <div class="mobile-menu" id="mobile-menu"><a href="index.html">About</a><a href="publications.html">Publications</a><a href="teaching.html" class="active">Teaching</a><a href="events.html">Talks</a><a href="art.html">Art</a><a href="resume.html">CV</a><a href="contact.html">Contact</a></div>
+</nav>
+<main>
+<div class="wrap">
+<header class="page-head"><span class="eyebrow">Teaching</span><h1>Teaching</h1><p>Course pages with recitation sheets, lecture notes and exams for the courses I support at İzmir Institute of Technology.</p></header><section class="section"><h2 class="section-title">2025–2026 Fall Semester</h2><div class="grid grid-3"><article class="card">
+  <span class="meta">MATH 141 · Fall 2025–2026</span>
+  <h3>Basic Calculus I</h3>
+  <div class="pills"><a class="pill" href="Math141_Fall25/Math141_Fall25_Syllabus.pdf" target="_blank" rel="noopener">Syllabus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a class="pill" href="Math141_Fall25/Math141_Fall25_RecitationClasses.html">Recitations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a class="pill" href="Math141_Fall25/Math141_Fall25_LectureNotes.html">Lecture notes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a class="pill" href="Math141_Fall25/Math141_Fall25_Exams.html">Exams <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article><article class="card">
+  <span class="meta">MATH 145 · Fall 2025–2026</span>
+  <h3>Calculus for Engineering and Science I</h3>
+  <div class="pills"><a class="pill" href="Math145_Fall25/Math145_Fall25_RecitationClasses.html">Recitations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a class="pill" href="Math145_Fall25/Math145_Fall25_Exams.html">Exams <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article><article class="card">
+  <span class="meta">MATH 111 · Fall 2025–2026</span>
+  <h3>Analytic Geometry</h3>
+  <div class="pills"><a class="pill" href="Math111_Fall25/Math111_Fall25_Syllabus.pdf" target="_blank" rel="noopener">Syllabus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a class="pill" href="Math111_Fall25/Math111_Fall25_Exams.html">Exams <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+</article></div></section><section class="section"><h2 class="section-title">Teaching Experience</h2>
+<div class="card card-feature">
+  <span class="meta">Since 2019 · İzmir Institute of Technology</span>
+  <h3>Research and Teaching Assistant</h3>
+  <p class="sub">Weekly tutorials in English for Calculus I–III, Basic Calculus, Calculus for Engineering and Science, Analytic Geometry, Fundamentals of Mathematics, and Probability and Statistics.</p>
+</div></section>
 </div>
-
-<!-- Scripts -->
-<script>
-// Dark mode toggle
-document.getElementById('dark-toggle')?.addEventListener('click', () => {
-  document.documentElement.classList.toggle('dark');
-});
-
-// Mobile menu toggle
-const menuToggle = document.getElementById('menu-toggle');
-const navbar = document.getElementById('navbar');
-menuToggle?.addEventListener('click', () => {
-  navbar.classList.toggle('hidden');
-});
-</script>
-
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <p>© 2026 Hikmet Burak Özcan · Department of Mathematics, İzmir Institute of Technology</p>
+    <p><a href="mailto:hikmetozcan@iyte.edu.tr">hikmetozcan@iyte.edu.tr</a></p>
+  </div>
+</footer>
 </body>
 </html>
